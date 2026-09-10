@@ -14,6 +14,11 @@
       color: #5e81ac;
   }
 
+  ol,  ul {
+      padding-left: 2rem;
+      /* or 40px, the typical browser default */
+  }
+
   p {
       color: dodgerblue;
       text-align: left;
@@ -26,7 +31,33 @@
       text-transform: uppercase;
   }
 
+  /* This is cool I have never used this one before */
   p::selection {
-    background-color: bisque;
-    color:#1e1e24;
+      background-color: bisque;
+      color: #1e1e24;
+  }
+
+  /* ================ Site ================== */
+  .site-header-title {
+      color: cyan;
+      font-size: 2.5rem;
+      font-weight: 900;
+
+      text-shadow:
+          2px 2px 0px #9ca3af,
+          4px 4px 0px #6b7280,
+          6px 6px 0px #4b5563,
+          8px 8px 6px rgba(0, 0, 0, 0.3);
+
+      text-align: center;
+  }
+
+  .site-signature {
+      color: cadetblue;
+      font-size: 2.2em;
+      font-family: Lucida Handwriting, Papyrus, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .site-footer {
+    text-align: center;
   }
