@@ -23,12 +23,11 @@
             color: #5e81ac;
         }
 
-        img {
-            border: 3px solid #1c2735;
-            border-radius: 12px;
+        #imgLogo {
             display: inline;
             max-width: 100%;
             height: auto;
+            margin: 4px;
         }
 
         #body_style {
@@ -46,21 +45,26 @@
     <header>
         <div
             style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:  2em;">
-            JS
+            <div style="width: 100%;display: inline-flex;">
+                <div style="width: 120px;"><img id="imgLogo" src="Dremzel.gif" alt="Logo"></div>
+                <div style="width: 100%;text-align: center;">JS HTML 1</div>
+                <div style="width: 120px;"></div>
+            </div>
         </div>
         <nav style="padding-top: 22px;">
             <ul>
-                <!-- <li><a href="sol_youtube.html">Sol Youtube</a></li> -->
+                <li><a href="Basic_HTML_1.html">Goto 1</a></li>
             </ul>
         </nav>
 
     </header>
 
     <main style="padding-top: 22px;">
+        <p><i>Some</i> <b>Fun</b> with <u>JavaScript</u></p><br>
         <button onclick="alert('What!')">Say What?</button><br />
         <button onclick="showAlert('Where!')">Say Where?</button><br />
         <button onclick="Got_The_Blues2()">Sing Shine</button>
-        <div id="BBK">....Baaba....</div><br>
+        <div id="BBK"><b>....Baaba....</b></div><br>
 
         <button onclick="showVal()">Test ButtOn</button>
     </main>
