@@ -1,0 +1,30 @@
+:root {
+    --body-bg: #1e1e24;
+    --col-card-bg: #59768f;
+    --body-text: #e6e6eb;
+
+    --site-header-title: #99b4d6;
+    --site-link: #fff;
+    --site-link-hover: #fff;
+    --site-link-visited: #fff;
+    /* shades  */
+    --site-title: #5e81ac;
+
+    /* colors by actions */
+    --site-combo-link: #11498d;
+    --site-combo-visited: #223c5c;
+    --site-combo-hover: #99b4d6;
+    --site-combo-reverse-link: #99b4d6;
+    --site-combo-reverse-hover: #99b4d6;
+
+    --site-combo-notice: #cccfa2;
+    --site-combo-emergency: #ec2020;
+
+    --site-title: #5e81ac;
+    --signature: #99b4d6;
+    --site-header: #5e81ac;
+    --site-footer: #333;
+
+    --nav-top-bg:#333;
+
+}

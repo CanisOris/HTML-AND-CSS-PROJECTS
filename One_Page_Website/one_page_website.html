@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>js stuff</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="M@" />
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=2)" />
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+    <!-- <script src="Basic_JavaScript_1.js" defer></script> -->
+    <link rel="stylesheet" type="text/css" href="./sytles/master.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        #imgLogo {
+            display: inline;
+            max-width: 100%;
+            height: auto;
+            margin: 4px;
+        }
+
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: var(--nav-top-bg);
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: var('--body-bg');
+            padding-left: 20px;
+        }
+
+
+
+        /* Add a card effect for articles */
+        .card {
+
+            background-color: var(--col-card-bg);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+
+        }
+
+        .card p {
+            color: --body-text;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: var(--site-footer);
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .form-textbox {
+            width: 100%;
+            height: 30px;
+            text-indent: 3px;
+            border-radius: 3px;
+            border: solid 1px var(--background-form-border-gray-49);
+            font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: .9em;
+        }
+
+        .form-textbox:read-only {
+            width: 100%;
+            height: 30px;
+            text-indent: 3px;
+            border-radius: 3px;
+            border: solid 1px var(--background-form-border-gray-49);
+            background-color: #EBEBE4;
+        }
+
+        .form-textbox-multiline {
+            width: 100%;
+            text-indent: 3px;
+            border-radius: 3px;
+            border: solid 1px var(--background-form-border-gray-49);
+            font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: .9em;
+            resize: none;
+        }
+
+        .form-textbox-multiline:read-only {
+            width: 100%;
+            text-indent: 3px;
+            border-radius: 3px;
+            border: solid 1px var(--background-form-border-gray-49);
+            resize: none;
+            background-color: #EBEBE4;
+        }
+
+        .form-field-adjustment {
+            margin-bottom: 5px;
+        }
+
+        .site-title {
+            width: 100%;
+            text-align: center;
+            margin-top: 32px;
+            font-size: 2.2em;
+            color: var(--site-title);
+        }
+
+        .form-submission-button {
+            display: inline-block;
+            font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1em;
+            height: 30px;
+            min-width: 90px;
+            border-radius: 3px;
+            color: #58595B;
+            background-color: #FEFEFE;
+            border: 1px solid #cccccc;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e1e1e1));
+        }
+
+        .form-submission-button:hover {
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#E1E1E1), to(#CCCCCC));
+            border: 1px solid #b2b2b2;
+        }
+
+        .form-submission-button:active {
+            background-color: #808080;
+        }
+
+        .form-submission-button:focus {
+            background-color: #808080;
+        }
+
+        .form-checkbox {
+            height: 26px;
+            text-indent: 3px;
+            border-radius: 3px;
+            border: solid 1px var(--background-form-border-gray-49);
+        }
+    </style>
+
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body id="body_style">
+    <header>
+        <div font-size: 2em;">
+            <div style="width: 100%;display: inline-flex;">
+                <div style="width: 120px;"><img id="imgLogo" src="./images/Logo1.png" alt="Logo"></div>
+                <div class="site-title">AI Terms</div>
+                <div style="width: 120px;"></div>
+            </div>
+        </div>
+        <nav style="padding-top: 22px;">
+            <div class="topnav">
+                <a href="#1">Link</a>
+                <a href="#2">Link</a>
+                <a href="#3">Link</a>
+                <div style="float: right;margin-top: 12px;">
+                    <form><input id="search" class="form-textbox" type="text" placeholder="Search"></form>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <main style="padding-top: 0px;">
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+<div id="1"></div>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2027</h5>
+
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco.</p>
+
+                </div>
+                <div class="card">
+                    <div id="2"></div>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2027</h5>
+                    <div class="fakeimg" style="height: 200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco.</p>
+                </div>
+                <div class="card">
+                    <div id="3"></div>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2027</h5>
+                    <div class="fakeimg" style="height: 200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco.</p>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <div style="min-width:300px;">
+                        <h2>Fixxed Content Size</h2>
+                        <div class="fakeimg" style="height: 100px;">Image</div>
+                        <p>Fixxed content size in flex percent area</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Top Terms</h3>
+
+                </div>
+                <div class="card">
+                    <h3>Video</h3>
+<div>
+            <h3>Vedeos</h3>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/TfndsbIWuWI?autoplay=1&mute=1" title="Soccer Sol"
+                    frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+
+            </div>
+        </div>
+                </div>
+                <div class="card">
+                    <h3>Contact</h3>
+                    <p>
+                    <form>
+                        <div style="display: inline-block;">
+                            <input id="firstname" type="text" placeholder="First Name" class="form-textbox"
+                                style="margin-bottom: 5px;">
+                            <input id="lastname" type="text" placeholder="Last Name" class="form-textbox"
+                                style="margin-bottom: 5px;">
+                            <input id="email" type="text" placeholder="Email" class="form-textbox"
+                                style="margin-bottom: 5px;">
+                            <input id="phone" type="tel" placeholder="Phone Number" class="form-textbox"
+                                style="margin-bottom: 5px;">
+                            <div >
+                                <input type="checkbox" id="Newsletter" class="form-checkbox"
+                                    style="margin-bottom: 5px;">
+                                Would you like to recieve our monthly newsletter
+                            </div>
+                            <textarea placeholder="Type the message ...." class="form-textbox-multiline"></textarea>
+                            <input type="submit" value="Submit" class="form-submission-button">
+                        </div>
+                    </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Created by <div class="site-signature">M&#x40;</div>
+        <div>&#169;2026</div>
+
+    </footer>
+</body>
+
+</html>
