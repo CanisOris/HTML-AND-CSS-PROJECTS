@@ -2,6 +2,7 @@
  @import 'colors.css';
  @import 'text.css';
  @import 'menu.css';
+ @import 'layout.css';
  
  * {
       margin: 0;

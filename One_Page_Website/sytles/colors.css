@@ -1,4 +1,5 @@
 :root {
+
     --body-bg: #1e1e24;
     --col-card-bg: #59768f;
     --body-text: #e6e6eb;
@@ -24,7 +25,28 @@
     --signature: #99b4d6;
     --site-header: #5e81ac;
     --site-footer: #333;
+    /* --------------------------------------- */
+    --site-nav-top-bg: #333;
+    --site-nav-top-btn-txt: #f2f2f2;
+    --site-nav-top-btn-hover: #ddd;
 
-    --nav-top-bg:#333;
+    /* --------------------------------------- */
+    --site-btn-bg: #FEFEFE;
+    --site-btn-color-txt: #58595B;
+    --site-btn-border: #cccccc;
+    --site-btn-bg1: #fefefe;
+    --site-btn-bg2: #CCCCCC;
+    --site-btn-hover-bg: #E1E1E1;
+    --site-btn-hover-bg1: #E1E1E1;
+    --site-btn-hover-bg2: #CCCCCC;
+    --site-btn-hover-border: #b2b2b2;
+    --site-btn-focus: #808080;
+
+    /* --------------------------------------- */
+    --site-chkb-border: #808080;
+    --site-frm-txtbx-border: #b2b2b2;
+    --site-frm-txtbx-ronly-bg: #EBEBE4;
+
+
 
 }
