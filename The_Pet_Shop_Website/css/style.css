@@ -1,0 +1,63 @@
+/* Imported https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    /* margin: 0; */
+    /* padding-top: 0; */
+
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: beige;
+    overflow-x: hidden;
+
+}
+
+/* NAVBAR */
+
+li {
+    display: inline;
+    padding: 5px;
+
+}
+
+a {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(46. 31. 31. 0.5);
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+a:hover {
+    color: aquamarine;
+}
+
+.nav-bar {
+    height: 110px;
+    background-color: rgb(30, 54, 99);
+    padding-top: 15px 0px 10px 0px;
+    /* the minus margins stretch the navbar background beyond the web browser screen edge*/
+    margin: -16px -10px 0px -10px;
+    position: sticky;
+    /*create a sticky element */
+    top: 0;
+}
+
+
+/* creates a line under the home and contact links to serperate them from the images links */
+
+#nav-border {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff;
+}
+
+
+img {
+    height: 20%;
+    width: 20%;
+    border-radius: 42px;
+}
