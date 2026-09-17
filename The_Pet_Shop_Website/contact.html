@@ -5,7 +5,7 @@
     <title>HTML Documents Submission Assignment</title>
     <meta name="description" content="Contact us for information">
     <meta charset="utf-8" />
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -28,35 +28,37 @@
             <h3 id="contact-h3">Please provide your contact information and a brief message of your inquiry.</h3>
         </div>
         <div>
-            <form>
-                <input id="firstname" type="text" placeholder="First Name">
-                <input id="firstname" type="text" placeholder="Last Name"><br>
-                <input id="firstname" type="text" placeholder="Email"><br>
-                <input id="firstname" type="tel" placeholder="Phone Number"><br>
-                <input type="checkbox" id="Newsletter">
-                <label for="Newsletter">Would you like to recieve our monthly newsletter</label><br>
-                <textarea placeholder="Type the message ...."></textarea><br>
-                <input type="submit" value="Submit">
+            <form class="contact-grid">
+                <input class="form-textbox" id="firstname" type="text" placeholder="First Name">
+                <input class="form-textbox" id="lastname" type="text" placeholder="Last Name">
+                <input class="form-textbox" id="email" type="email" placeholder="Email">
+                <input class="form-textbox" id="phone" type="tel" placeholder="Phone Number">
+
+                <div class="checkbox-wrapper">
+                    <input class="form-checkbox" type="checkbox" id="newsletter">
+                    <label for="newsletter">Would you like to receive our monthly newsletter?</label>
+                </div>
+
+                <textarea class="form-textbox-multiline" id="message" placeholder="Type the message ...."></textarea>
+
+                <input class="form-submission-button" type="submit" value="Submit">
             </form>
         </div>
     </section>
     <!-- FOOTER -->
     <footer>
-        <table style="border: solid 2px black;">
-            <tr>
-                <td>
-                    <p>The Pet Shop!&copy;</p>
+        <div class="footer-div">
+            <div>
+                <p>The Pet Shop!&copy;</p>
+            </div>
+            <div>
+                123 Square Ave<br>
+                Portland, OR 97204
+            </div>
+            <div>503-234-3966</div>
 
-                </td>
-                <td>
-                    <p>123 Square Ave</p>
-                    <p>Portland, OR 97204</p>
-                </td>
-                <td>
-                    <p>503-234-3966</p>
-                </td>
-            </tr>
-        </table>
+        </div>
+
     </footer>
 </body>
 
