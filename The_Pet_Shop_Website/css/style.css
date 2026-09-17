@@ -1,0 +1,116 @@
+/* Imported https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    /* margin: 0; */
+    /* padding-top: 0; */
+
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: beige;
+    overflow-x: hidden;
+
+}
+
+/* NAVBAR */
+
+li {
+    display: inline;
+    padding: 5px;
+
+}
+
+a {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(46. 31. 31. 0.5);
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+a:hover {
+    color: aquamarine;
+}
+
+.nav-bar {
+    height: 110px;
+    background-color: rgb(30, 54, 99);
+    padding: 2px 0 10px 0;
+    /* the minus margins stretch the navbar background beyond the web browser screen edge*/
+    margin: -8px -10px 0 -10px;
+    position: sticky;
+    /*create a sticky element */
+    top: 0;
+}
+
+
+/* creates a line under the home and contact links to serperate them from the images links */
+
+#nav-border {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff;
+}
+
+/* HEADERS */
+
+h1,
+h2,
+h3 {
+    color: #0a3f63;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    /* imported font */
+    text-shadow: 1px .5px 4px rgba(51, 54, 63, 0.918);
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+
+
+#contact-h3 {
+    text-shadow: none;
+}
+
+/* create a text color change animation on the h1 tags for the home and contact page headers */
+@keyframes color-text {
+    0% {
+        color: #86aec9;
+    }
+
+    100% {
+        color: #1a2c7a
+    }
+}
+
+/* calss the animation by ists name in a css selector so it can be applied to a specific html element */
+.animate-text {
+    animation: color-text 4s;
+}
+
+/* body content */
+img {
+    height: 350px;
+    width: 350px;
+    border-radius: 42px;
+    box-shadow: 0 16px 8px 0 rgba(90, 70, 34, 0.849),
+        4px 8px 12px 0 rgba(29, 62, 105, 80%);
+}
