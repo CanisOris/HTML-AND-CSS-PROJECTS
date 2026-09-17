@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Git Commands vs. Time Travel Game Mechanics</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 40px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            color: #1a252f;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+        p.subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #f1f4f8;
+        }
+        code {
+            background-color: #eef2f5;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.9em;
+            color: #c7254e;
+        }
+        .time-command {
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #95a5a6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Git Commands vs. Time Travel Game Mechanics</h1>
+        <p class="subtitle">A conceptual reference guide mapping standard Git version control commands to science-fiction time travel actions.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Git Command</th>
+                    <th>Git Result</th>
+                    <th>Time Travel Command</th>
+                    <th>Time Travel Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>git init</code></td>
+                    <td>Starts tracking a new Git repository in the current folder.</td>
+                    <td><span class="time-command">INIT_CHRONO</span></td>
+                    <td>Establishes a brand-new timeline anchor point at the current moment in history.</td>
+                </tr>
+                <tr>
+                    <td><code>git add [file]</code></td>
+                    <td>Stages changes, preparing them to be locked into the next snapshot.</td>
+                    <td><span class="time-command">QUEUE_EVENT [memory]</span></td>
+                    <td>Selects specific temporal alterations to be bundled into the next permanent save point.</td>
+                </tr>
+                <tr>
+                    <td><code>git commit -m "msg"</code></td>
+                    <td>Saves staged changes into the local history ledger with a descriptive note.</td>
+                    <td><span class="time-command">ANCHOR_SAVEPOINT "msg"</span></td>
+                    <td>Freezes the queued events into an immutable, permanent historical checkpoint in the ledger.</td>
+                </tr>
+                <tr>
+                    <td><code>git status</code></td>
+                    <td>Displays modified, staged, and untracked files in the working directory.</td>
+                    <td><span class="time-command">SCAN_TIMELINE_DRIFT</span></td>
+                    <td>Detects unanchored reality shifts, showing what changes haven't been saved to a checkpoint yet.</td>
+                </tr>
+                <tr>
+                    <td><code>git log</code></td>
+                    <td>Shows the chronological history of commits, authors, and unique hashes.</td>
+                    <td><span class="time-command">VIEW_CHRONICLE</span></td>
+                    <td>Pulls up the grand history ledger showing every past save point, creator, and timestamp.</td>
+                </tr>
+                <tr>
+                    <td><code>git branch [name]</code></td>
+                    <td>Creates a new pointer to the current commit to start a parallel path.</td>
+                    <td><span class="time-command">FORK_REALITY [name]</span></td>
+                    <td>Splits the universe into a parallel dimension so you can test a risky theory safely.</td>
+                </tr>
+                <tr>
+                    <td><code>git switch [name]</code></td>
+                    <td>Moves your working directory to a different branch or commit.</td>
+                    <td><span class="time-command">JUMP_TIMELINE [name]</span></td>
+                    <td>Teleports your physical presence and reality anchor to a different alternate universe or past save point.</td>
+                </tr>
+                <tr>
+                    <td><code>git merge [name]</code></td>
+                    <td>Integrates changes from a specified branch into your current branch.</td>
+                    <td><span class="time-command">CONVERGE_TIMELINES [name]</span></td>
+                    <td>Merges an alternate reality's history and choices back into your current prime universe, resolving any paradoxes.</td>
+                </tr>
+                <tr>
+                    <td><code>git stash</code></td>
+                    <td>Temporarily shelves uncommitted changes to clean the working directory.</td>
+                    <td><span class="time-command">STORE_IN_TEMPORAL_POCKET</span></td>
+                    <td>Tucks away unanchored personal gear so you can jump to a different timeline without losing progress.</td>
+                </tr>
+                <tr>
+                    <td><code>git reset</code></td>
+                    <td>Moves the current branch pointer backward, changing history states.</td>
+                    <td><span class="time-command">REWIND_REALITY</span></td>
+                    <td>Rewinds the local timeline pointer, optionally scrubbing recent events from existence.</td>
+                </tr>
+                <tr>
+                    <td><code>git revert</code></td>
+                    <td>Creates a new commit that precisely undoes a previous commit's changes.</td>
+                    <td><span class="time-command">POST_CORRECTION_EVENT</span></td>
+                    <td>Injects a brand-new historical action that reverses an old mistake while keeping the audit trail intact for safety.</td>
+                </tr>
+                <tr>
+                    <td><code>git push</code></td>
+                    <td>Uploads local branch commits to a remote repository server.</td>
+                    <td><span class="time-command">BROADCAST_REALITY</span></td>
+                    <td>Uploads your local timeline save points to the Central Cosmic Archive so other time travelers can access them.</td>
+                </tr>
+                <tr>
+                    <td><code>git pull</code></td>
+                    <td>Fetches and merges changes from a remote repository into the local branch.</td>
+                    <td><span class="time-command">SYNC_COSMIC_ARCHIVE</span></td>
+                    <td>Downloads updates from the Central Archive and merges foreign timeline shifts into your local universe.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="footer">
+            <p>Generated for Git Learning &mdash; Time Travel Game Metaphor</p>
+        </div>
+    </div>
+</body>
+</html>
