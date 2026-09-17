@@ -46,6 +46,7 @@ a:hover {
     position: sticky;
     /*create a sticky element */
     top: 0;
+    z-index: 9;
 }
 
 
@@ -108,9 +109,69 @@ h3 {
 
 /* body content */
 img {
-    height: 350px;
-    width: 350px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
     border-radius: 42px;
     box-shadow: 0 16px 8px 0 rgba(90, 70, 34, 0.849),
         4px 8px 12px 0 rgba(29, 62, 105, 80%);
+
+        /* Adds a smooth animation for the hover effect */
+    transition: all 0.3s ease-in-out;
+}
+/* The hover effect */
+img:hover {
+    filter: brightness(1.15); /* Brightens the image to "highlight" it */
+    transform: scale(1.03);   /* Adds a slight pop/zoom */
+    cursor: pointer;          /* Changes the mouse to a hand icon */
+}
+
+.column {
+    float: left;
+    width: 48%;
+    /*  */
+    padding: 10px;
+}
+/* groups elements inside a dive element together and forces any floating elements outside of the div under it with this class selector */
+/* honestly setting over-rides like this makes me cringe */
+/* Having at one point to work on 80 different production websites these over-rides get lost in stacks of css files and break things and make troubleshooting a pain in the A$$ */
+
+/* not sure if flex-box was available when this was made but it seems like a better solution */
+/* if have used negative values but usually because of some older design contraint that was added  */
+/* you start with over-rides and negative values you might be building your castle on a swamp */
+/* this is what following the lesson is doing, its not me, in case someone looks at this */
+/* .container{
+    background-size: 100% !important;
+    margin: 0 -60px 50px -40px;
+    padding: 5px 0 10px 0;
+
+} */
+/* Its like the lesson is setting up issues then adding more css to cover the issues, instead of creating a solid approach */
+
+/* .container::after{
+    content: "";
+    clear:both;
+    display: table;
+} */
+
+/* I did the exercise but barfff..... then applied KISS overide  */
+
+/* .overlay{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 42px;
+
+} */
+
+.video-container {
+    clear: both;
+
 }
