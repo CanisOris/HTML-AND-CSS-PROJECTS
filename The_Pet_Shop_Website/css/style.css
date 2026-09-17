@@ -1,10 +1,35 @@
 /* Imported https://fonts.google.com/ */
+:root {
+
+    --dark-10: hsl(229, 77%, 30%);
+    --light-10: hsl(180, 2%, 90%);
+    --heading-txt: hsl(180, 48%, 38%);
+    /* --------------------------------------- */
+    /* form */
+    /* --------------------------------------- */
+    --site-btn-bg: #FEFEFE;
+    --site-btn-color-txt: #58595B;
+    --site-btn-border: #cccccc;
+    --site-btn-bg1: #fefefe;
+    --site-btn-bg2: #CCCCCC;
+    --site-btn-hover-bg: #E1E1E1;
+    --site-btn-hover-bg1: #E1E1E1;
+    --site-btn-hover-bg2: #CCCCCC;
+    --site-btn-hover-border: #b2b2b2;
+    --site-btn-focus: #808080;
+    --site-chkb-border: #808080;
+    --site-frm-txtbx-border: #b2b2b2;
+    --site-frm-txtbx-ronly-bg: #EBEBE4;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
+
+
 * {
-    /* margin: 0; */
-    /* padding-top: 0; */
+    margin: 0;
+    padding-top: 0;
 
     box-sizing: border-box;
 }
@@ -39,7 +64,7 @@ a:hover {
 
 .nav-bar {
     height: 110px;
-    background-color: rgb(30, 54, 99);
+    background-color: var(--dark-10);
     padding: 2px 0 10px 0;
     /* the minus margins stretch the navbar background beyond the web browser screen edge*/
     margin: -8px -10px 0 -10px;
@@ -62,7 +87,7 @@ a:hover {
 h1,
 h2,
 h3 {
-    color: #0a3f63;
+    color: var(--heading-txt);
     text-align: center;
     font-family: 'Mukta', sans-serif;
     /* imported font */
@@ -109,7 +134,7 @@ h3 {
 
 /* body content */
 img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     display: block;
     margin: auto;
@@ -117,14 +142,18 @@ img {
     box-shadow: 0 16px 8px 0 rgba(90, 70, 34, 0.849),
         4px 8px 12px 0 rgba(29, 62, 105, 80%);
 
-        /* Adds a smooth animation for the hover effect */
+    /* Adds a smooth animation for the hover effect */
     transition: all 0.3s ease-in-out;
 }
+
 /* The hover effect */
 img:hover {
-    filter: brightness(1.15); /* Brightens the image to "highlight" it */
-    transform: scale(1.03);   /* Adds a slight pop/zoom */
-    cursor: pointer;          /* Changes the mouse to a hand icon */
+    filter: brightness(1.15);
+    /* Brightens the image to "highlight" it */
+    transform: scale(1.03);
+    /* Adds a slight pop/zoom */
+    cursor: pointer;
+    /* Changes the mouse to a hand icon */
 }
 
 .column {
@@ -133,6 +162,7 @@ img:hover {
     /*  */
     padding: 10px;
 }
+
 /* groups elements inside a dive element together and forces any floating elements outside of the div under it with this class selector */
 /* honestly setting over-rides like this makes me cringe */
 /* Having at one point to work on 80 different production websites these over-rides get lost in stacks of css files and break things and make troubleshooting a pain in the A$$ */
@@ -171,7 +201,167 @@ img:hover {
 
 } */
 
-.video-container {
-    clear: both;
+iframe {
+    max-width: 100%;
+    display: table;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+}
 
+
+#video {
+    clear: both;
+    background-color: var(--dark-10);
+    padding: 0 0 50px 0;
+}
+
+footer {
+    background-color: var(--dark-10);
+    color: var(--light-10);
+    /* the negative values are not used anymore the standard is set in * */
+    margin: 32px 0 0 0;
+    bottom: 0;
+}
+
+.footer-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    /* Defaults to a single column for mobile */
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+/* FORM */
+
+.form-textbox {
+    width: 100%;
+    height: 30px;
+    text-indent: 3px;
+    border-radius: 3px;
+    border: solid 1px var(--site-frm-txtbx-border);
+    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .9em;
+}
+
+.form-textbox:read-only {
+    width: 100%;
+    height: 30px;
+    text-indent: 3px;
+    border-radius: 3px;
+    border: solid 1px var(--site-frm-txtbx-border);
+    background-color: var(--site-frm-txtbx-ronly-bg);
+}
+
+.form-textbox-multiline {
+    width: 100%;
+    text-indent: 3px;
+    border-radius: 3px;
+    border: solid 1px var(--site-frm-txtbx-border);
+    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .9em;
+    resize: none;
+}
+
+.form-textbox-multiline:read-only {
+    width: 100%;
+    text-indent: 3px;
+    border-radius: 3px;
+    border: solid 1px var(--site-frm-txtbx-border);
+    resize: none;
+    background-color: var(--site-frm-txtbx-ronly-bg);
+}
+
+.form-field-adjustment {
+    margin-bottom: 5px;
+}
+
+.site-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 2.2em;
+    color: var(--site-title);
+}
+
+.form-submission-button {
+    display: inline-block;
+    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1em;
+    height: 30px;
+    min-width: 90px;
+    border-radius: 3px;
+    color: var(---site-btn-color-txt);
+    background-color: var(--site-btn-bg);
+    border: 1px solid var(--site-btn-border);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-bg1)), to(var(--site-btn-bg2)));
+}
+
+.form-submission-button:hover {
+    background-color: var(--site-btn-hover-bg);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-hover-bg1)), to(var(--site-btn-hover-bg2)));
+    border: 1px solid var(--sitee-btn-hover-border);
+}
+
+.form-submission-button:active {
+    background-color: var(--site-btn-focus);
+}
+
+.form-submission-button:focus {
+    background-color: var(--site-btn-focus);
+}
+
+.form-checkbox {
+    height: 26px;
+    text-indent: 3px;
+    border-radius: 3px;
+    border: solid 2px var(--site-chkb-border);
+}
+
+
+
+
+
+
+
+/* Checkbox wrapper keeps the box and text perfectly aligned */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Adjust textarea so it looks proportionate */
+.contact-grid textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Media Query: Switches to 2 columns on screens wider than 600px */
+@media (min-width: 600px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Target elements that should span across both columns */
+    .checkbox-wrapper,
+    .contact-grid textarea,
+    .contact-grid input[type="submit"] {
+        grid-column: span 2;
+    }
 }
