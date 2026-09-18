@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap');
+
 :root {
+
     /* Base background and text */
     --dark-10: hsl(140, 22%, 18%);
     --light-10: hsl(340, 25%, 95%);
@@ -6,7 +9,7 @@
     /* Navigation styling */
     --nav-bar-bg: #2C1E16;
     --nav-bar-menu-selector-bg: rgba(44, 30, 22, 0.85);
-    
+
     /* Hover and accent colors */
     --nav-bar-hover-bg: hsl(338, 55%, 60%);
     --nav-bar-hover-nth1-bg: hsl(135, 28%, 35%);
@@ -15,11 +18,11 @@
     --nav-bar-hover-color: #FFFFFF;
     --nav-bar-selector-color: hsl(205, 55%, 75%);
     --nav-hover-boxhsadow: hsl(338, 55%, 60%);
-    
+
     /* Footer styling */
     --footer-bar-bg: #2C1E16;
     --footer-bar-color: #92B088;
-    
+
     /* Image overlay */
     --img-highlight-overlay: rgba(87, 138, 171, 0.35);
 }
@@ -63,8 +66,63 @@ a:hover,
     transition: background-color 0.4s ease-in;
 }
 
+/* ----------------------------------------------------------------------- */
 
+.kanji-logo {
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 28px;
+    color: var(--light-10);
+    padding: 0 40px;
+    text-align: center;
+    display: flex;             
+    flex-direction: column;    
+    line-height: 1.3;
+}
+.kanji-char {
+    display: inline-block;           /* Required for CSS transform to work on span elements */
+    transition: transform 0.3s ease; /* Controls the speed and smoothness of the grow/shrink */
+    cursor: default;                 /* Keeps the standard cursor rather than the text-selection cursor */
+}
+.kanji-char:hover {
+    transform: scale(1.6);           /* Scales the hovered character to 160% of its original size */
+}
+
+.translation-container {
+    position: absolute;
+    top: 100%; /* Pushes the text exactly below the navbar */
+    left: 0;
+    width: 100%;
+    pointer-events: none; /* Prevents the invisible text block from interrupting mouse clicks */
+}
+
+.trans-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: Calibri, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--light-10);
+    padding-top: 15px;
+    /* Adds a drop shadow to ensure readability over the background images */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.85); 
+    
+    /* Starts invisible and defines the fade effect */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#k-ai:hover ~ .translation-container #t-ai,
+#k-ki:hover ~ .translation-container #t-ki,
+#k-do:hover ~ .translation-container #t-do {
+    opacity: 1;
+}
 /* ================= navbar =================== */
+
+.nav-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
 
 .nav-bar {
     position: sticky;
@@ -129,7 +187,7 @@ ul {
 footer {
     background-color: var(--footer-bar-bg);
     /* dont need the negative values because it is set in * */
-   
+
     padding-top: 30px;
     min-height: 70px;
     overflow: hidden;
@@ -174,4 +232,87 @@ img {
 
 .overlay:hover {
     opacity: 0.6;
+}
+
+/* img2 */
+
+/* sets the scale size */
+/* transition of scale */
+/* sets stack layer */
+.zoom {
+    transform: scale(1);
+    transition: 0.5s ease-out;
+    z-index: 3;
+}
+
+/* zoom effect */
+.zoom:hover {
+    transform: scale(1.5);
+    transition: 0.5s ease-out;
+
+}
+
+/* img3 */
+
+/* animation burst hides overflow */
+.circle {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    /* creates a circle/oval shape */
+    border-radius: 50%;
+    /* makes the animation invisible until activated */
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: burst-reverse 7s;
+}
+
+/* triggers hover effect on circle  */
+.circle:hover::before {
+    animation: burst 7s;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* creates growing circle effect */
+@keyframes burst {
+    0% {
+        opacity: 0.2;
+        background-color: var(--light-10);
+
+    }
+
+    100% {
+        opacity: 0.7;
+        background-color: var(--light-10);
+        width: 300%;
+        height: 300%;
+    }
+
+}
+
+@keyframes burst-reverse {
+    0% {
+        opacity: 0.7;
+        background-color: var(--light-10);
+        width: 300%;
+        height: 300%;
+    }
+
+    100% {
+        opacity: 0.2;
+        background-color: var(--light-10);
+
+    }
+
 }
