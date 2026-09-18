@@ -16,21 +16,37 @@
 <body>
     <!-- NAVBAR -->
     <nav id="page-top" class="nav-bar">
-
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li class="drop">
-                <a href="#">Images</a>
-                <div class="rollover-menu">
-                    <a href="#img1">Image 1</a>
-                    <a href="#img2">Image 2</a>
-                    <a href="#img3">Image 3</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+    <div class="nav-wrapper">
+        <div class="kanji-logo">
+            <!-- Added unique IDs to each character -->
+            <span class="kanji-char" id="k-ai">合</span>
+            <span class="kanji-char" id="k-ki">気</span>
+            <span class="kanji-char" id="k-do">道</span>
+            
+            <!-- Translation container placed as a sibling to the characters -->
+            <div class="translation-container">
+                <div class="trans-text" id="t-ai">Ai (合): Harmony, joining, or bringing together.</div>
+                <div class="trans-text" id="t-ki">Ki (気 / 氣): Spirit, mind, or universal energy/life force.</div>
+                <div class="trans-text" id="t-do">Dō (道): The way, path, or method.</div>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li class="drop">
+                    <a href="#">Images</a>
+                    <div class="rollover-menu">
+                        <a href="#img1">Image 1</a>
+                        <a href="#img2">Image 2</a>
+                        <a href="#img3">Image 3</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
     <header>
 
     </header>
@@ -44,13 +60,13 @@
         </div>
         <!-- img 2 -->
         <div class="image-container" id="img2">
-            <img src="Images/j2.jpg">
-            <div class="overlay"></div>
+            <img src="Images/j2.jpg" class="zoom">
         </div>
         <!-- img o3 -->
         <div class="image-container" id="img3">
-            <img src="Images/j3.jpg">
-            <div class="overlay"></div>
+            <div class="circle">
+                <img src="Images/j3.jpg">
+            </div>
         </div>
 
     </section>
