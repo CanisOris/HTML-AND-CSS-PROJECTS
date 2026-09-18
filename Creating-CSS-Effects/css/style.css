@@ -1,10 +1,27 @@
 :root {
-    --dark-10: hsl(229, 59%, 41%);
-    --light-10: hsl(180, 2%, 90%);
+    /* Base background and text */
+    --dark-10: hsl(140, 22%, 18%);
+    --light-10: hsl(340, 25%, 95%);
 
-    --nav-bar-bg: #502F1E;
-    --nav-bar-hover-bg: hsl(300, 32%, 85%);
-    --nav-bar-hover-color: hsl(330, 94%, 31%);
+    /* Navigation styling */
+    --nav-bar-bg: #2C1E16;
+    --nav-bar-menu-selector-bg: rgba(44, 30, 22, 0.85);
+    
+    /* Hover and accent colors */
+    --nav-bar-hover-bg: hsl(338, 55%, 60%);
+    --nav-bar-hover-nth1-bg: hsl(135, 28%, 35%);
+    --nav-bar-hover-nth2-bg: hsl(205, 45%, 48%);
+    --nav-bar-hover-nth3-bg: hsl(338, 65%, 45%);
+    --nav-bar-hover-color: #FFFFFF;
+    --nav-bar-selector-color: hsl(205, 55%, 75%);
+    --nav-hover-boxhsadow: hsl(338, 55%, 60%);
+    
+    /* Footer styling */
+    --footer-bar-bg: #2C1E16;
+    --footer-bar-color: #92B088;
+    
+    /* Image overlay */
+    --img-highlight-overlay: rgba(87, 138, 171, 0.35);
 }
 
 *,
@@ -30,19 +47,20 @@ a {
     text-decoration: none;
     /* all case to uppercase */
     text-transform: uppercase;
-    width: 120px;
+    width: 160px;
     padding: 30px;
     text-align: center;
     transition: background-color 0.4s ease-in;
 }
 
 /* drop hover triggers wjen any one of the images list tag is being hovered over */
-a:hover, .drop:hover {
+a:hover,
+.drop:hover {
     color: var(--nav-bar-hover-color);
     background-color: var(--nav-bar-hover-bg);
-    box-shadow: 0 8px 16px 0 rgba(125, 208, 233, 0.747);
+    box-shadow: 0 8px 16px 0 var(--nav-hover-boxhsadow);
     /* box-shadow: 0 8px 16px 0 rgb(125, 208, 233); */
-    transition: background-color 0.8s ease-in;
+    transition: background-color 0.4s ease-in;
 }
 
 
@@ -55,18 +73,44 @@ a:hover, .drop:hover {
     background-color: var(--nav-bar-bg);
     /* layer level */
 }
+
 /* styles and hides the anchor links within the images link div tag */
-.rollover-menu{
+.rollover-menu {
     display: none;
     position: absolute;
-    background-color: var(--light-10);
+    background-color: var(--nav-bar-menu-selector-bg);
     box-shadow: 0 8px 16px 0 rgba(33, 65, 75, 0.747);
 }
-/* displays anchor elements when the user hovers their mouse over the images link */
-.drop:hover .rollover-menu{
-    display:block;
+
+/* when hover effect is triggered */
+.rollover-menu a:hover {
+    color: var(--light-10);
 }
 
+/* first anchor element child within the rollover-menu div tag */
+.rollover-menu a:hover:nth-child(1) {
+    background-color: var(--nav-bar-hover-nth1-bg);
+}
+
+/* second anchor element child within the rollover-menu div tag */
+.rollover-menu a:hover:nth-child(2) {
+    background-color: var(--nav-bar-hover-nth2-bg);
+}
+
+/* third anchor element child within the rollover-menu div tag */
+.rollover-menu a:hover:nth-child(3) {
+    background-color: var(--nav-bar-hover-nth3-bg);
+}
+
+/* displays anchor elements when the user hovers their mouse over the images link */
+.drop:hover .rollover-menu {
+    display: block;
+}
+
+/* specifically styles the anchor elements within the div tag that contains the rollover-menu class selector  */
+.rollover-menu a {
+    color: var(--nav-bar-selector-color);
+}
 
 ul {
     /* remove default bullets */
@@ -79,4 +123,55 @@ ul {
     display: flex;
     align-items: center;
 
+}
+
+/* footer  */
+footer {
+    background-color: var(--footer-bar-bg);
+    /* dont need the negative values because it is set in * */
+   
+    padding-top: 30px;
+    min-height: 70px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.footer-text {
+    font-family: Calibri, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--footer-bar-color);
+}
+
+img {
+    width: 700px;
+    height: 550px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+/* creates uniform space for bottom image */
+#img3 {
+    padding-bottom: 372px;
+}
+
+/* image one  */
+/* overlay dark grey color over the first image */
+/* because we want it to look like its a button pressed rule not like its highlighting it. rolf */
+
+.overlay {
+    position: absolute;
+    width: 700px;
+    height: 550px;
+    background-color: var(--img-highlight-overlay);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.overlay:hover {
+    opacity: 0.6;
 }
