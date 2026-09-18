@@ -10,29 +10,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        :root {
-            --dark-10: hsl(229, 77%, 30%);
-            --light-10: hsl(180, 2%, 90%);
-        }
 
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding-top: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--dark-10);
-            color: var(--light-10);
-        }
-
-        a {
-            color: var(--light-10);
-        }
-    </style>
 </head>
 
 <body>
@@ -40,14 +18,16 @@
     <nav id="page-top" class="nav-bar">
 
         <ul>
-            <li><a href="#">Home</a>
-
-                <div>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li class="drop">
+                <a href="#">Images</a>
+                <div class="rollover-menu">
                     <a href="#img1">Image 1</a>
                     <a href="#img2">Image 2</a>
                     <a href="#img3">Image 3</a>
                 </div>
-
             </li>
         </ul>
     </nav>
@@ -66,7 +46,7 @@
             <img src="Images/j2.jpg">
         </div>
         <!-- img o3 -->
-        <div id="img2">
+        <div id="img3">
             <img src="Images/j3.jpg">
         </div>
 

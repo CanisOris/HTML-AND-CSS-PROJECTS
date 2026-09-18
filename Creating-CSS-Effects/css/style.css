@@ -1,0 +1,82 @@
+:root {
+    --dark-10: hsl(229, 59%, 41%);
+    --light-10: hsl(180, 2%, 90%);
+
+    --nav-bar-bg: #502F1E;
+    --nav-bar-hover-bg: hsl(300, 32%, 85%);
+    --nav-bar-hover-color: hsl(330, 94%, 31%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-10);
+    color: var(--light-10);
+}
+
+a {
+    color: var(--light-10);
+    display: block;
+    font-family: Calibri, sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    /* remove default underline  */
+    text-decoration: none;
+    /* all case to uppercase */
+    text-transform: uppercase;
+    width: 120px;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.4s ease-in;
+}
+
+/* drop hover triggers wjen any one of the images list tag is being hovered over */
+a:hover, .drop:hover {
+    color: var(--nav-bar-hover-color);
+    background-color: var(--nav-bar-hover-bg);
+    box-shadow: 0 8px 16px 0 rgba(125, 208, 233, 0.747);
+    /* box-shadow: 0 8px 16px 0 rgb(125, 208, 233); */
+    transition: background-color 0.8s ease-in;
+}
+
+
+/* ================= navbar =================== */
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background-color: var(--nav-bar-bg);
+    /* layer level */
+}
+/* styles and hides the anchor links within the images link div tag */
+.rollover-menu{
+    display: none;
+    position: absolute;
+    background-color: var(--light-10);
+    box-shadow: 0 8px 16px 0 rgba(33, 65, 75, 0.747);
+}
+/* displays anchor elements when the user hovers their mouse over the images link */
+.drop:hover .rollover-menu{
+    display:block;
+}
+
+
+ul {
+    /* remove default bullets */
+    list-style: none;
+    background-color: var(--nav-bar-bg);
+    /* margin settings given but not standard practice anymore */
+    /* margin: -10px -10px 0 -10px;  also removed 0px px is not std on 0 */
+    overflow: hidden;
+    /* create flex container so it will take up horizontal space */
+    display: flex;
+    align-items: center;
+
+}
