@@ -1,0 +1,106 @@
+/* google font :) */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+:root {
+
+    /* Base background and text */
+    --site-bg: hsl(140, 22%, 18%);
+    --site-text: hsl(340, 25%, 95%);
+    --site-link-a: hsl(340, 25%, 95%);
+    --site-link-a-hover: hsl(340, 25%, 95%);
+
+    /* Navigation styling */
+    --nav-bar-bg: #2C1E16;
+    --nav-bar-menu-selector-bg: rgba(44, 30, 22, 0.85);
+
+    /* Hover and accent colors */
+    --nav-bar-link-a: hsl(340, 25%, 95%);
+    --nav-bar-link-a-hover: hsl(340, 25%, 95%);
+ --nav-hover-boxhsadow: hsl(338, 55%, 60%)
+    --nav-bar-hover-bg: hsl(338, 55%, 60%);
+    --nav-bar-hover-nth1-bg: hsl(135, 28%, 35%);
+    --nav-bar-hover-nth2-bg: hsl(205, 45%, 48%);
+    --nav-bar-hover-nth3-bg: hsl(338, 65%, 45%);
+    --nav-bar-border-bottom: hsl(338, 65%, 45%);
+    --nav-bar-hover-color: #FFFFFF;
+    --nav-bar-selector-color: hsl(205, 55%, 75%);
+   ;
+
+    /* Footer styling */
+    --footer-bar-bg: #2C1E16;
+    --footer-bar-color: #92B088;
+
+    /* Image overlay */
+    --img-highlight-overlay: rgba(87, 138, 171, 0.35);
+}
+
+
+/* ---------[ Layout ]-------------- */
+/* GLOBAL CORRECTIONS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+    /* margin negatives not needed */
+    background-color: var();
+}
+
+html{
+    /* remove scroll bar x */
+    overflow-x: hidden; 
+}
+
+/* the instructions keep placing the 'a' and 'ul' outside of the specific need */
+/* I moved them to under .nav-bar (again this scales better) */
+
+/* STD LAYOUT */
+
+body {
+    background-color: var(--site-bg);
+    color: var(--site-text);
+}
+
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    background-color: var(--site-bg);
+    border-bottom: 5px solid var(--nav-bar-border-bottom);
+}
+
+.nav-bar a {
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--nav-bar-link-a);
+    width: 100px;
+    padding: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in;
+}
+
+.nav-bar a:hover{
+    background-color: var(--nav-bar-menu-selector-bg);
+    color: var(--nav-bar-link-a-hover);
+    box-shadow: 0 8px 16px 0 var(--nav-hover-boxhsadow);
+    transition: background-color 0.3s ease-in;
+}
+
+.footer-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 50px;
+    align-items: center;
+    text-align: center;
+}

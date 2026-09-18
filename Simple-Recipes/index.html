@@ -12,38 +12,40 @@
 
 </head>
 
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+        <div class="nav-wrapper">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
 
-<!-- NAVBAR -->
-<nav class="nav-bar">
-    <div class="nav-wrapper">
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
+                <li class="drop">
+                    <a href="#recipes">Recipes</a>
+                    <div class="rollover-menu">
+                        <a href="#featured">Featured Recipe</a>
+                        <a href="#pasta">Pasta</a>
+                        <a href="#chicken">Chicken</a>
+                        <a href="#pork">Pork</a>
+                        <a href="#biscuits">Biscuits</a>
+                        <a href="#fish">Fish</a>
+                        <a href="#dessert">Dessert</a>
+                    </div>
+                </li>
+                <li class="drop">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-            <li class="drop">
-                <a href="#recipes">Recipes</a>
-                <div class="rollover-menu">
-                    <a href="#img1">Featured Recipe</a>
-                    <a href="#img1">Pasta</a>
-                    <a href="#img1">Chicken</a>
-                    <a href="#img1">Pork</a>
-                    <a href="#img1">Biscuits</a>
-                    <a href="#img1">Fish</a>
-                    <a href="#img1">Dessert</a>
-                </div>
-            </li>
-            <li class="drop">
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<header>
-    <h1>Simple Recipes</h1>
+    <header>
+        <h1>Simple Recipes</h1>
+    </header>
     <section>
-        <div>
+        <!-- ======== featured recipe ============ -->
+        <div id="featured">
             <h2>Featured Recipe</h2>
             <div>
                 <img src="images/skillet-pizza.jpeg" alt="pizza img">
@@ -67,7 +69,8 @@
         <!-- Recipe cards -->
         <div id="recipes">
             <h2>Recipes</h2>
-            <div>
+            <!-- ======== pasta ============ -->
+            <div id="pasta">
                 <h3>Saucy Tortelloni Parm</h3>
                 <div>
                     <img src="images/tortelloni.jpeg" alt="">
@@ -81,11 +84,124 @@
                     <input type="button" value="recipe">
                 </div>
             </div>
+            <!-- ======== CHICKEN ============ -->
+            <div id="chicken">
+                <h3>Mediterranean Chicken Thighs</h3>
+                <div>
+                    <img src="images/chicken-thighs.jpeg" alt="">
+                </div>
+                <div>
+                    <h4>Pret Time:</h4>
+                    <p>20-30 minutes</p>
+                    <h4>Level:</h4>
+                    <p>easy</p>
+                    <p></p>
+                    <input type="button" value="recipe">
+                </div>
+            </div>
+            <!-- ======== PORK ============ -->
+            <div id="pork">
+                <h3>Crispy Pork Katsu & Rice </h3>
+                <div>
+                    <img src="images/pork-katsu.jpeg" alt="">
+                </div>
+                <div>
+                    <h4>Pret Time:</h4>
+                    <p>20-30 minutes</p>
+                    <h4>Level:</h4>
+                    <p>medium</p>
+                    <p></p>
+                    <input type="button" value="recipe">
+                </div>
+            </div>
+            <!-- ======== BISCUITS ============ -->
+            <div id="biscuits">
+                <h3>Cheddar Cheese Biscuit</h3>
+                <div>
+                    <img src="images/cheddar-biscuits.jpeg" alt="">
+                </div>
+                <div>
+                    <h4>Pret Time:</h4>
+                    <p>40-50 minutes</p>
+                    <h4>Level:</h4>
+                    <p>medium</p>
+                    <p></p>
+                    <input type="button" value="recipe">
+                </div>
+            </div>
+            <!-- ======== FISH ============ -->
+            <div id="fish">
+                <h3>Baked Cod & Scalloped Potatoes</h3>
+                <div>
+                    <img src="images/baked-cod.jpeg" alt="">
+                </div>
+                <div>
+                    <h4>Pret Time:</h4>
+                    <p>30-40 minutes</p>
+                    <h4>Level:</h4>
+                    <p>easy</p>
+                    <p></p>
+                    <input type="button" value="recipe">
+                </div>
+            </div>
+            <!-- ======== DESSERT ============ -->
+            <div id="dessert">
+                <h3>S'mores Cake</h3>
+                <div>
+                    <img src="images/smores.jpeg" alt="">
+                </div>
+                <div>
+                    <h4>Pret Time:</h4>
+                    <p>50-60 minutes</p>
+                    <h4>Level:</h4>
+                    <p>medium</p>
+                    <p></p>
+                    <input type="button" value="recipe">
+                </div>
+            </div>
         </div>
     </section>
-</header>
+    <!-- contact form =============================== -->
+    <section>
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <h3>want more information about our recipes?
+                <br>
+                Contact us below!
 
-<body></body>
+            </h3>
+            <form>
+                <input class="form-textbox" id="firstname" type="text" placeholder="First Name">
+                <input class="form-textbox" id="lastname" type="text" placeholder="Last Name">
+                <br>
+                <input class="form-textbox" id="email" type="email" placeholder="Email">
+                <input class="form-textbox" id="phone" type="tel" placeholder="Phone Number">
+                <br>
+                <input class="form-checkbox" type="checkbox" id="subscription">
+                <label for="subscription">Subscribe for weekly recipes!</label>
+                <br>
+                <textarea class="form-textbox-multiline" id="message" placeholder="Type the message ...."></textarea>
+                <br>
+                <input class="form-submission-button" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <!-- foooter =============================== -->
+    <footer>
+        <!-- not going to use a table because the rule has been for years to not use tables for layout it is for tabular data -->
+         <div class="footer-div">
+            <div>
+                <p>Simple Recipes &copy;</p>
+            </div>
+            <div>
+                310 SQ 4th Ave Suite 200 Ave<br>
+                Portland, OR 97204
+            </div>
+            <div>503-206-6915</div>
+
+        </div>
+    </footer>
+</body>
 
 
 </html>
