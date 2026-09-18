@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Creating Effects with CSS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Tech Acad Instruction">
+    <!-- <meta http-equiv="refresh" content="30"> -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        :root {
+            --dark-10: hsl(229, 77%, 30%);
+            --light-10: hsl(180, 2%, 90%);
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding-top: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-10);
+            color: var(--light-10);
+        }
+
+        a {
+            color: var(--light-10);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="page-top" class="nav-bar">
+
+        <ul>
+            <li><a href="#">Home</a>
+
+                <div>
+                    <a href="#img1">Image 1</a>
+                    <a href="#img2">Image 2</a>
+                    <a href="#img3">Image 3</a>
+                </div>
+
+            </li>
+        </ul>
+    </nav>
+    <header>
+
+    </header>
+
+    <!-- IMAGES -->
+    <section>
+        <!-- img 1 -->
+        <div id="img1">
+            <img src="Images/j1.jpg">
+        </div>
+        <!-- img 2 -->
+        <div id="img2">
+            <img src="Images/j2.jpg">
+        </div>
+        <!-- img o3 -->
+        <div id="img2">
+            <img src="Images/j3.jpg">
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <p>The Tech Academy &copy;</p>
+        </div>
+    </footer>
+</body>
+
+</html>
