@@ -27,10 +27,9 @@
 
 
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding-top: 0;
-
     box-sizing: border-box;
 }
 
@@ -242,8 +241,18 @@ footer {
     padding: 20px;
 }
 
+/* LAYOUT */
+/* recalculates the size to the width by including */
+.content-box {
+    width: 500px;
+    padding:8px;
+    margin: 0 auto;
 
-
+}
+.content-bar {
+    width: 100%;
+    text-align: center;
+}
 
 /* FORM */
 
@@ -295,6 +304,15 @@ footer {
     margin-top: 32px;
     font-size: 2.2em;
     color: var(--site-title);
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    float:right;
+}
+
+input[type="submit"]:hover{
+    color:rgb(27, 75, 15);
 }
 
 .form-submission-button {
