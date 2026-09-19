@@ -17,19 +17,25 @@
     /* Hover and accent colors */
     --nav-bar-link-a: hsl(340, 25%, 95%);
     --nav-bar-link-a-hover: hsl(340, 25%, 95%);
- --nav-hover-boxhsadow: hsl(338, 55%, 60%)
+    --nav-hover-boxhsadow: hsla(338, 55%, 60%, 0.205);
     --nav-bar-hover-bg: hsl(338, 55%, 60%);
+    --nav-bar-hover-color: #FFFFFF;
+    --nav-bar-selector-color: hsl(205, 55%, 75%);
+    --nav-bar-rollover-color: #1cbb44;
+    --nav-bar-rollover-hover-color: #c5d3c9;
+    --nav-hover-rollover-boxhsadow: hsla(145, 42%, 10%, 0.705);
+
     --nav-bar-hover-nth1-bg: hsl(135, 28%, 35%);
     --nav-bar-hover-nth2-bg: hsl(205, 45%, 48%);
     --nav-bar-hover-nth3-bg: hsl(338, 65%, 45%);
     --nav-bar-border-bottom: hsl(338, 65%, 45%);
-    --nav-bar-hover-color: #FFFFFF;
-    --nav-bar-selector-color: hsl(205, 55%, 75%);
-   ;
+    --nav-bar-rollover-border-top: hsl(338, 65%, 45%);
 
     /* Footer styling */
     --footer-bar-bg: #2C1E16;
     --footer-bar-color: #92B088;
+    --footer-bar-border-top: var(--nav-bar-border-bottom);
+
 
     /* Image overlay */
     --img-highlight-overlay: rgba(87, 138, 171, 0.35);
@@ -48,9 +54,11 @@
     background-color: var();
 }
 
-html{
+html {
     /* remove scroll bar x */
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    /* smooth your scroll, ohh yeah */
+    scroll-behavior: smooth;
 }
 
 /* the instructions keep placing the 'a' and 'ul' outside of the specific need */
@@ -63,6 +71,35 @@ body {
     color: var(--site-text);
 }
 
+footer {
+    /* aligned in footer-div and don't need negative margins  */
+    min-height: 50px;
+    padding-top: 12px;
+    background-color: var(--footer-bar-bg);
+    border-top: 5px solid var(--footer-bar-border-top);
+    bottom: 0;
+}
+
+/* don't use tables for layout!!! */
+footer .footer-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    font-family: "Josefin Slab", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--footer-bar-color);
+}
+
+footer .font-copy {
+    /* just for fun */
+    font-size: 36px;
+    display: inline;
+    vertical-align: -7px;
+}
+
+/* ################# [ NAV-BAR ] ################### */
 
 .nav-bar {
     position: sticky;
@@ -79,28 +116,53 @@ body {
 }
 
 .nav-bar a {
+    display: block;
     font-family: "Josefin Slab", serif;
     font-optical-sizing: auto;
     font-size: 24px;
     font-weight: 800;
     color: var(--nav-bar-link-a);
-    width: 100px;
+    width: auto;
+    /* auto is better */
     padding: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease-in;
 }
 
-.nav-bar a:hover{
+/* only-of-type targets unique type */
+.nav-bar a:hover,
+.drop:hover a:only-of-type {
     background-color: var(--nav-bar-menu-selector-bg);
     color: var(--nav-bar-link-a-hover);
     box-shadow: 0 8px 16px 0 var(--nav-hover-boxhsadow);
     transition: background-color 0.3s ease-in;
+
 }
 
-.footer-div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    min-height: 50px;
-    align-items: center;
-    text-align: center;
+.nav-bar .rollover-menu {
+    /* prevents the anchor links in this div from shwoing on the web browser until overwise precified */
+    display: none;
+    /* absolute will postion the dive element reletive to the postion of its parent element */
+    position: absolute;
+    background-color: var(--nav-bar-hover-color);
+    box-shadow: 0 8px 16px 0 var(--nav-hover-boxhsadow);
+}
+
+/* creates a treigger effect when the user hovers their mouse over the recipes link. the trigger will display all elecments within the  rollover-menu class div element */
+.nav-bar .drop:hover .rollover-menu {
+    display: block;
+}
+
+.nav-bar .rollover-menu a {
+    color: var(--nav-bar-rollover-color);
+
+}
+
+.nav-bar .rollover-menu a:hover {
+    color: var(--nav-bar-rollover-hover-color);
+    box-shadow: 0 8px 16px 0 var(--nav-hover-rollover-boxhsadow);
+}
+
+.nav-bar .rollover-menu a:nth-child(1) {
+    border-top: 5px solid var(--nav-bar-rollover-border-top);
 }
