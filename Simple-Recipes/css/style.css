@@ -52,6 +52,11 @@
     --p-text: hsl(128, 79%, 9%);
 
     /* =========================================
+       About
+       ========================================= */
+    --about-txt: hsl(128, 79%, 9%);
+
+    /* =========================================
        Image
        ========================================= */
     --img-boxshadow: hsl(128, 79%, 9%);
@@ -67,12 +72,20 @@
     /* =========================================
        Form
        ========================================= */
+    --frm-txt: hsl(191, 7%, 55%);
+    --frm-border: hsl(191, 7%, 55%);
+    --frm-txt-focus: hsl(191, 93%, 21%);
+    --frm-border-focus: hsl(191, 81%, 11%);
     --frm-btn-feature-bg: hsl(189, 71%, 30%);
     --frm-btn-feature-txt: hsl(190, 61%, 88%);
     --frm-btn-feature-bg-hover: hsl(199, 78%, 47%);
     --frm-btn-bg: hsl(190, 16%, 69%);
     --frm-btn-txt: hsl(190, 86%, 26%);
     --frm-btn-bg-hover: hsl(182, 75%, 66%);
+    --frm-lbl-txt: hsl(182, 72%, 20%);
+    --frm-btn-submit-bg: hsl(128, 88%, 27%);
+    --frm-btn-submit-txt: hsl(190, 36%, 70%);
+    --frm-btn-submit-bg-hover: hsl(165, 83%, 28%);
 
 }
 
@@ -384,6 +397,126 @@ input[type="button"]:hover {
     border: 2px solid var(--recipe-card-border);
     transform: rotateY(180deg);
 }
+
+/* ##########################################################
+   About
+########################################################## */
+
+.site-about {
+    display: block;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    text-align: center;
+}
+
+.site-about h2{
+    padding-top: 18px;
+}
+
+.site-about p {
+    font-family: "Josefin Slab", serif;
+    color: var(--about-txt);
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+
+
+/* ##########################################################
+   Contact Form
+########################################################## */
+.form-container {
+    color: var(--frm-lbl-txt);
+}
+
+#contact {
+    display: block;
+    margin-bottom: 70px;
+}
+
+form {
+    display: table;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+form input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: var(--frm-txt);
+    border: 2px solid var(--frm-border);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 15px 10px 0;
+    transition: 0.3s ease-out;
+}
+
+form input:focus {
+
+    color: var(--frm-txt-focus);
+    border: 2px solid var(--frm-border-focus);
+    transition: 0.3s ease-out;
+    outline: none;
+}
+
+label {
+    font-family: "Josefin Slab", serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    color: var(--frm-lbl-txt);
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: both;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: var(--frm-txt);
+    border: 3px solid var(--frm-border);
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s ease-out;
+}
+
+textarea:focus {
+
+    color: var(--frm-txt-focus);
+    border: 3px solid var(--frm-border-focus);
+    outline: none;
+    transition: 0.3s ease-out;
+}
+
+
+input[type="submit"] {
+    background-color: var(--frm-btn-submit-bg);
+    color: var(--frm-btn-submit-txt);
+    border: none;
+    border-radius: 20px;
+    font-family: "Josefin Slab", serif;
+    font-weight: bold;
+    padding: 11px 17px;
+    cursor: pointer;
+    font-size: 24px;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--frm-btn-submit-bg-hover);
+    color: var(--frm-btn-submit-txt);
+}
+
 
 /* ##########################################################
     NOTE: PUT @media queries on the bottom 
