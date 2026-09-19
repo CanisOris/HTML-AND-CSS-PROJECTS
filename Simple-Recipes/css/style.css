@@ -37,7 +37,12 @@
     --header-h1-text: var(--nav-bg);
     --header-h2-text: var(--nav-bg);
     --header-h2-text-decoration: hsl(59, 82%, 57%);
-    
+
+    /* =========================================
+       Cards
+       ========================================= */
+    --recipe-card-bg: hsl(189, 71%, 30%);
+
     /* =========================================
        Paragraphs
        ========================================= */
@@ -87,7 +92,8 @@ body {
 }
 
 
-/* BODY */
+/* Containers ------------------------------------------------------- */
+
 .container {
     display: inline-block;
     background-size: 100%;
@@ -96,19 +102,31 @@ body {
 
 }
 
+.recipe-container {
+    width: 500px;
+    height: 350px;
+    /* auto flex size */
+    margin: 100px auto 180px;
+}
+
 /* IMAGES ------------------------------------------------------- */
 
-.column{
+.column {
     float: left;
     width: 48%;
+    /* *** had to add this to get it to wrap so I could be in the same state as the instructions 
+        Note: the min-width was not required by the presenter.
+        Not sure if this is a newer browswer differnce or I missed something else. I spent 40 minutes looking.
+    */
+    min-width: 500px;
     padding: 10px;
 }
 
-.column img:nth-child(-n + 7){
+.column img:nth-child(-n + 7) {
     width: 500px;
     height: 350px;
     box-shadow: 0 4px 8px var(--img-boxshadow),
-    0 6px 20px 0 var(--img-boxshadow);
+        0 6px 20px 0 var(--img-boxshadow);
 }
 
 
@@ -117,6 +135,7 @@ h1 {
     font-family: "Sacramento", cursive;
     font-size: 80px;
     color: var(--header-h1-text);
+    text-align: center;
 }
 
 h2,
@@ -250,4 +269,37 @@ footer .font-copy {
 
 .nav-bar .rollover-menu a:nth-child(1) {
     border-top: 5px solid var(--nav-rollover-border-accent);
+}
+
+
+
+/* ##########################################################
+    NOTE: PUT @media queries on the bottom 
+    This took me a while to figure out and I don't think it was stated
+########################################################## */
+
+@media screen and (max-width: 1200px) {
+    .column {
+        width: 100%;
+        padding: 0;
+        margin-left: -15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .column img:nth-child(-n + 7) {
+        width: 350px;
+        height: 225px;
+    }
+
+    .recipe-container {
+        width: 350px;
+        height: 225px;
+    }
+}
+
+
+.recipe-card-background {
+    background-color: var(--recipe-card-bg);
 }
