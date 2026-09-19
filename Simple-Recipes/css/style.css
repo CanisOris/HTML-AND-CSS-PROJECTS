@@ -1,19 +1,20 @@
 /* google font :) */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 :root {
     /* =========================================
        GLOBAL VARIABLES
        Base colors for the entire site
        ========================================= */
-    --global-bg-primary: hsl(140, 22%, 18%);
+    --global-bg-primary: hsl(140, 29%, 67%);
     --global-text-primary: hsl(340, 25%, 95%);
 
     /* =========================================
        NAVIGATION: MAIN BAR
        Top-level <ul> and <a> links
        ========================================= */
+    --nav-bg: hsl(141, 61%, 11%);
     --nav-text-link: hsl(340, 25%, 95%);
     --nav-text-link-hover: hsl(340, 25%, 95%);
     --nav-bg-hover: rgba(44, 30, 22, 0.85);
@@ -29,6 +30,23 @@
     --nav-rollover-text-link-hover: #c5d3c9;
     --nav-rollover-border-accent: hsl(338, 65%, 45%);
     --nav-rollover-shadow-hover: hsla(145, 42%, 10%, 0.705);
+
+    /* =========================================
+       Headings
+       ========================================= */
+    --header-h1-text: var(--nav-bg);
+    --header-h2-text: var(--nav-bg);
+    --header-h2-text-decoration: hsl(59, 82%, 57%);
+    
+    /* =========================================
+       Paragraphs
+       ========================================= */
+    --p-text: hsl(128, 79%, 9%);
+
+    /* =========================================
+       Image
+       ========================================= */
+    --img-boxshadow: hsl(128, 79%, 9%);
 
     /* =========================================
        FOOTER
@@ -68,6 +86,76 @@ body {
     color: var(--global-text-primary);
 }
 
+
+/* BODY */
+.container {
+    display: inline-block;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+
+}
+
+/* IMAGES ------------------------------------------------------- */
+
+.column{
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+.column img:nth-child(-n + 7){
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 4px 8px var(--img-boxshadow),
+    0 6px 20px 0 var(--img-boxshadow);
+}
+
+
+/* HEADERS ------------------------------------------------------- */
+h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 80px;
+    color: var(--header-h1-text);
+}
+
+h2,
+h3,
+h4 {
+    font-family: "Josefin Slab", serif;
+    text-align: center;
+}
+
+h2 {
+    color: var(--header-h2-text);
+    font-size: 60px;
+    text-decoration: underline;
+    text-decoration-color: var(--header-h2-text-decoration);
+
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/* PARAGRAPHS ------------------------------------------------------- */
+p {
+    font-family: "Josefin Slab", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--p-text);
+    text-align: center;
+}
+
+
+
+/* FOOTERS ------------------------------------------------------- */
 footer {
     /* aligned in footer-div and don't need negative margins  */
     min-height: 50px;
@@ -108,7 +196,7 @@ footer .font-copy {
     display: flex;
     list-style-type: none;
     align-items: center;
-    background-color: var(--global-bg-primary);
+    background-color: var(--nav-bg);
     border-bottom: 5px solid var(--nav-border-accent);
 }
 
