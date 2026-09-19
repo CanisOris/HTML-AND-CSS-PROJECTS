@@ -42,6 +42,9 @@
        Cards
        ========================================= */
     --recipe-card-bg: hsl(189, 71%, 30%);
+    --recipe-card-flip-bg: hsl(188, 63%, 20%);
+    --recipe-card-border: hsl(186, 19%, 80%);
+    --recipe-card-text: hsl(186, 19%, 80%);
 
     /* =========================================
        Paragraphs
@@ -64,9 +67,12 @@
     /* =========================================
        Form
        ========================================= */
-    --frm-btn-bg: hsl(189, 71%, 30%);
-    --frm-btn-txt: hsl(190, 61%, 88%);
-    --frm-btn-bg-hover: hsl(199, 78%, 47%);
+    --frm-btn-feature-bg: hsl(189, 71%, 30%);
+    --frm-btn-feature-txt: hsl(190, 61%, 88%);
+    --frm-btn-feature-bg-hover: hsl(199, 78%, 47%);
+    --frm-btn-bg: hsl(190, 16%, 69%);
+    --frm-btn-txt: hsl(190, 86%, 26%);
+    --frm-btn-bg-hover: hsl(182, 75%, 66%);
 
 }
 
@@ -110,12 +116,7 @@ body {
 
 }
 
-.recipe-container {
-    width: 500px;
-    height: 350px;
-    /* auto flex size */
-    margin: 100px auto 180px;
-}
+
 
 /* IMAGES ------------------------------------------------------- */
 
@@ -280,7 +281,28 @@ footer .font-copy {
 }
 
 
-/* ################# [ RESCIPES ] ################### */
+/* ################# [ RESCIPES ] ###################################### */
+
+.recipe-container {
+    width: 500px;
+    height: 350px;
+    /* auto flex size */
+    margin: 100px auto 180px;
+    perspective: 1000px;
+}
+
+.recipe-container p {
+    font-family: "Josefin Slab", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--recipe-card-text);
+    text-align: center;
+    line-height: 2.3;
+}
+
+.text-container {
+    padding-top: 70px;
+}
 
 .recipe-card-background {
     background-color: var(--recipe-card-bg);
@@ -290,32 +312,50 @@ footer .font-copy {
     font-family: "Sacramento", cursive;
     font-size: 60px;
     color: var(--header-h1-text);
-  
+
 }
 
-#featured-main-text{
+#featured-main-text {
     text-align: justify;
     padding-top: 20px;
     margin-left: 40px;
 }
 
-#featured-button{
+#featured-button {
     display: block;
     margin: 60px auto 0;
-    background-color: var(--frm-btn-bg);
+    background-color: var(--frm-btn-feature-bg);
     border-radius: 35px;
     border: none;
     font-family: "Josefin Slab", serif;
     font-size: 30px;
     font-weight: bold;
     padding: 15px 25px;
-    color: var(--frm-btn-txt);
+    color: var(--frm-btn-feature-txt);
     cursor: pointer;
 }
 
-#featured-button:hover{
-    background-color: var(--frm-btn-bg-hover);
+#featured-button:hover {
+    background-color: var(--frm-btn-feature-bg-hover);
 }
+
+input[type="button"] {
+    background-color: var(--frm-btn-bg);
+    color: var(--frm-btn-txt);
+    border: none;
+    border-radius: 20px;
+    font-family: "Josefin Slab", serif;
+    font-weight: bold;
+    padding: 11px 17px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+input[type="button"]:hover {
+    background-color: var(--frm-btn-bg-hover);
+    color: var(--frm-btn-txt);
+}
+
 
 /* Image Flipper */
 .flip {
@@ -327,15 +367,22 @@ footer .font-copy {
     transform-style: preserve-3d;
 }
 
-.flip:hover{
+.flip:hover {
     transform: rotateY(180deg);
 }
 
-.flip-front{
+.flip-front,
+.flip-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+}
+
+.flip-back {
+    background-color: var(--recipe-card-flip-bg);
+    border: 2px solid var(--recipe-card-border);
+    transform: rotateY(180deg);
 }
 
 /* ##########################################################
@@ -397,19 +444,28 @@ footer .font-copy {
 }
 
 @media screen and (max-width: 1599px) {
-    #featured img{
+    #featured img {
         margin-left: 0;
         margin-top: 40px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    #featured .recipe-card-background{
+    #featured .recipe-card-background {
         height: 300px;
 
     }
-    #featured img{
+
+    #featured img {
         margin-top: -65px;
     }
 
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Note: this is not an issue for me because of * box-sizing i did */
+    /* .text-container {
+        padding-top: 0;
+    } */
 }
