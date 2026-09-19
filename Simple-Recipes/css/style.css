@@ -60,6 +60,14 @@
     --footer-bg-primary: #2C1E16;
     --footer-text-primary: #92B088;
     --footer-border-accent: var(--nav-border-accent);
+
+    /* =========================================
+       Form
+       ========================================= */
+    --frm-btn-bg: hsl(189, 71%, 30%);
+    --frm-btn-txt: hsl(190, 61%, 88%);
+    --frm-btn-bg-hover: hsl(199, 78%, 47%);
+
 }
 
 
@@ -272,6 +280,42 @@ footer .font-copy {
 }
 
 
+/* ################# [ RESCIPES ] ################### */
+
+.recipe-card-background {
+    background-color: var(--recipe-card-bg);
+}
+
+#featured-header {
+    font-family: "Sacramento", cursive;
+    font-size: 60px;
+    color: var(--header-h1-text);
+  
+}
+
+#featured-main-text{
+    text-align: justify;
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+#featured-button{
+    display: block;
+    margin: 60px auto 0;
+    background-color: var(--frm-btn-bg);
+    border-radius: 35px;
+    border: none;
+    font-family: "Josefin Slab", serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 25px;
+    color: var(--frm-btn-txt);
+    cursor: pointer;
+}
+
+#featured-button:hover{
+    background-color: var(--frm-btn-bg-hover);
+}
 
 /* ##########################################################
     NOTE: PUT @media queries on the bottom 
@@ -300,6 +344,51 @@ footer .font-copy {
 }
 
 
-.recipe-card-background {
-    background-color: var(--recipe-card-bg);
+@media screen and (max-width: 1200px) {
+    #pork {
+        background-color: var(--recipe-card-bg);
+    }
+
+    #biscuits {
+        background-color: var(--recipe-card-bg);
+    }
+
+    #featured-main-text {
+        margin-left: 0;
+    }
+}
+
+/* @media screen and (max-width: 1200px) {
+    #featured-main-text {
+        margin-left: 0;
+    }
+} */
+
+@media screen and (min-width: 1600px) {
+    #featured img {
+        width: 700px;
+        height: auto;
+        /* adjusts image size 
+        */
+        margin-left: -100px;
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 1599px) {
+    #featured img{
+        margin-left: 0;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #featured .recipe-card-background{
+        height: 300px;
+
+    }
+    #featured img{
+        margin-top: -65px;
+    }
+
 }
