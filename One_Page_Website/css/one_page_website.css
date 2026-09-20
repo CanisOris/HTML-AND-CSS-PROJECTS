@@ -12,14 +12,14 @@
      --body-text: #e6e6eb;
 
      /* shades  */
-     --site-title: #5e81ac;
+     --site-title: #184172;
 
      /* colors by actions */
      --site-combo-visited: #223c5c;
      --site-combo-hover: #99b4d6;
 
 
-     --site-title: #5e81ac;
+     --site-title: #174c8d;
      --signature: #99b4d6;
      --site-footer: #333;
      /* --------------------------------------- */
@@ -78,168 +78,194 @@
                 TEXT
  ################################################### */
 
-a:link {
-    color: var(-site-combo-link);
-	text-decoration: none;
-}
+ a:link {
+     color: var(-site-combo-link);
+     text-decoration: none;
+ }
 
-a:visited {
-	color: var(--site-combo-visited);
-	text-decoration: none;
-}
+ a:visited {
+     color: var(--site-combo-visited);
+     text-decoration: none;
+ }
 
-a:hover {
-	color: var(--site-combo-hover);
-	text-decoration: none;
-}
-
-
-
-         /* Style the top navigation bar */
-        .topnav {
-            overflow: hidden;
-            background-color: var(--site-nav-top-bg);
-        }
-
-        /* Style the topnav links */
-        .topnav a {
-            float: left;
-            display: block;
-            color: var(--site-nav-top-btn-txt);
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        /* Change color on hover */
-        .topnav a:hover {
-            background-color: var(--site-nav-top-btn-hover);;
-            color: black;
-        }
- 
-
- 
-
- 
- 
+ a:hover {
+     color: var(--site-combo-hover);
+     text-decoration: none;
+ }
 
 
 
+ /* Style the top navigation bar */
+ .topnav {
+     overflow: hidden;
+     background-color: var(--site-nav-top-bg);
+ }
+
+ /* Style the topnav links */
+ .topnav a {
+     float: left;
+     display: block;
+     color: var(--site-nav-top-btn-txt);
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+ }
+
+ /* Change color on hover */
+ .topnav a:hover {
+     background-color: var(--site-nav-top-btn-hover);
+     ;
+     color: black;
+ }
+
+ /* Create two unequal columns that floats next to each other */
+ /* Left column */
+ .leftcolumn {
+     float: left;
+     width: 75%;
+ }
+
+ /* Right column */
+ .rightcolumn {
+     float: left;
+     width: 25%;
+     background-color: var('--body-bg');
+     padding-left: 20px;
+ }
+
+ /* ###################################################
+                CARD
+   ################################################### */
 
 
+ /* Add a card effect for articles */
+ .card {
 
+     background-color: var(--col-card-bg);
+     padding: 20px;
+     margin-top: 20px;
+     border-radius: 4px;
 
+ }
 
+ .card p {
+     color: --body-text;
+ }
 
+ /* Clear floats after the columns */
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+ }
 
+ /* Footer */
+ .footer {
+     padding: 20px;
+     text-align: center;
+     background: var(--site-footer);
+     margin-top: 20px;
+ }
 
+ .card .img {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding: 20px;
+     background-color: var(--body-bg);
+     color: var(--body-text);
+     border-radius: 4px;
+ }
 
-        /* Create two unequal columns that floats next to each other */
-        /* Left column */
-        .leftcolumn {
-            float: left;
-            width: 75%;
-        }
+ .card h2 {
+     color: var(--body-text);
+ }
 
-        /* Right column */
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            background-color: var('--body-bg');
-            padding-left: 20px;
-        }
+ .card h5 {
+     color: var(--body-text);
+ }
 
-
-  /* ###################################################
+ /* ###################################################
                 FORM
    ################################################### */
 
-.form-textbox {
-            width: 100%;
-            height: 30px;
-            text-indent: 3px;
-            border-radius: 3px;
-            border: solid 1px var(--site-frm-txtbx-border);
-            font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-            font-size: .9em;
-        }
+ .form-textbox {
+     width: 100%;
+     height: 30px;
+     text-indent: 3px;
+     border-radius: 3px;
+     border: solid 1px var(--site-frm-txtbx-border);
+     font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+     font-size: .9em;
+ }
+
+ .form-textbox-multiline {
+     width: 100%;
+     text-indent: 3px;
+     border-radius: 3px;
+     border: solid 1px var(--site-frm-txtbx-border);
+     font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+     font-size: .9em;
+     resize: none;
+ }
+
+ .form-submission-button {
+     display: inline-block;
+     font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+     font-weight: 600;
+     text-decoration: none;
+     font-size: 1em;
+     height: 30px;
+     min-width: 90px;
+     border-radius: 3px;
+     color: var(---site-btn-color-txt);
+     background-color: var(--site-btn-bg);
+     border: 1px solid var(--site-btn-border);
+     background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-bg1)), to(var(--site-btn-bg2)));
+ }
+
+ .form-submission-button:hover {
+     background-color: var(--site-btn-hover-bg);
+     background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-hover-bg1)), to(var(--site-btn-hover-bg2)));
+     border: 1px solid var(--sitee-btn-hover-border);
+ }
+
+ .form-submission-button:active {
+     background-color: var(--site-btn-focus);
+ }
+
+ .form-submission-button:focus {
+     background-color: var(--site-btn-focus);
+ }
+
+ .form-checkbox {
+     height: 26px;
+     text-indent: 3px;
+     border-radius: 3px;
+     border: solid 2px var(--site-chkb-border);
+ }
 
 
-
-        .form-textbox-multiline {
-            width: 100%;
-            text-indent: 3px;
-            border-radius: 3px;
-            border: solid 1px var(--site-frm-txtbx-border);
-            font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-            font-size: .9em;
-            resize: none;
-        }
-
-
-
-
-        .form-submission-button {
-            display: inline-block;
-            font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 1em;
-            height: 30px;
-            min-width: 90px;
-            border-radius: 3px;
-            color: var(---site-btn-color-txt);
-            background-color: var(--site-btn-bg);
-            border: 1px solid var(--site-btn-border);
-            background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-bg1)), to(var(--site-btn-bg2)));
-        }
-
-        .form-submission-button:hover {
-            background-color: var(--site-btn-hover-bg);
-            background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-hover-bg1)), to(var(--site-btn-hover-bg2)));
-            border: 1px solid var(--sitee-btn-hover-border);
-        }
-
-        .form-submission-button:active {
-            background-color: var(--site-btn-focus);
-        }
-
-        .form-submission-button:focus {
-            background-color: var(--site-btn-focus);
-        }
-
-        .form-checkbox {
-            height: 26px;
-            text-indent: 3px;
-            border-radius: 3px;
-            border: solid 2px var(--site-chkb-border);
-        }
-
-
-
-
-
-
-
-/*=========================================== p =======*/
+ /*=========================================== p =======*/
 
  p {
-      color: var(--body-text);
-      text-align: left;
-      margin-bottom: 16px;
-      line-height: 2.1;
-      letter-spacing: 0.5px;
-  }
+     color: var(--body-text);
+     text-align: left;
+     margin-bottom: 16px;
+     line-height: 2.1;
+     letter-spacing: 0.5px;
+ }
 
-  p::first-letter {
-      text-transform: uppercase;
-  }
+ p::first-letter {
+     text-transform: uppercase;
+ }
 
-  /* This is cool I have never used this one before */
-  p::selection {
-      background-color: bisque;
-      color: #1e1e24;
-  }
+ /* This is cool I have never used this one before */
+ p::selection {
+     background-color: bisque;
+     color: #1e1e24;
+ }
 
  /* ###################################################
                 TEXT
@@ -247,9 +273,18 @@ a:hover {
 
  /* ================ Site ================== */
 
+ .site-title {
+     flex: 1;
+     min-width: 0;
+     color: var(--site-title);
+     font-weight: 900;
+     text-align: center;
+     overflow-wrap: anywhere;
+ }
+
  .site-signature {
      color: var(--signature);
-     font-size: 2.2em;
+     font-size: 1.4em;
      font-family: Lucida Handwriting, Papyrus, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  }
 
@@ -257,20 +292,32 @@ a:hover {
  /* ###################################################
                 MEDIA
  ################################################### */
+ .video-container {
+     width: 100%;
+     aspect-ratio: 16 / 9;
+ }
+
+ .video-container iframe {
+     display: block;
+     width: 100%;
+     height: 100%;
+     border: 0;
+ }
+
  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-        @media screen and (max-width: 400px) {
-            .topnav a {
-                float: none;
-                width: 100%;
-            }
-        }
+ @media screen and (max-width: 400px) {
+     .topnav a {
+         float: none;
+         width: 100%;
+     }
+ }
 
-         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 800px) {
+ /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 800px) {
 
-            .leftcolumn,
-            .rightcolumn {
-                width: 100%;
-                padding: 0;
-            }
-        }
+     .leftcolumn,
+     .rightcolumn {
+         width: 100%;
+         padding: 0;
+     }
+ }
