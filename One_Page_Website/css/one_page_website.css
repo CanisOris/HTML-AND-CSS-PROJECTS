@@ -255,8 +255,48 @@
  }
 
 
- /*=========================================== p =======*/
+/* Upgrade the checkbox - The default is not very customizable from what I remember
+I always liked the custom ones */
 
+.image-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Pangolin', cursive; 
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+/* hide normal checkbox */
+.image-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* unchecked */
+.image-checkbox .custom-icon {
+  width: 64px; 
+  height: 64px;
+  margin-right: 10px;
+  background-image: url('../images/unchecked-image.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Checked state */
+/* First time using ~ sibling */
+.image-checkbox input[type="checkbox"]:checked ~ .custom-icon {
+  background-image: url('../images/checked-image.png');
+}
+
+
+ /* ###################################################
+                TEXT
+ ################################################### */
  p {
      color: var(--body-text);
      text-align: left;
@@ -275,9 +315,7 @@
      color: #1e1e24;
  }
 
- /* ###################################################
-                TEXT
- ################################################### */
+
 
  /* ================ Site ================== */
 
