@@ -15,8 +15,9 @@
      --site-title: #184172;
 
      /* colors by actions */
-     --site-combo-visited: #223c5c;
-     --site-combo-hover: #99b4d6;
+     --site-lnk: #052041;
+     --site-lnk-visited: #223c5c;
+     --site-lnk-hover: #99b4d6;
 
 
      --site-title: #174c8d;
@@ -74,26 +75,26 @@
      color: var(--site-title);
  }
 
- /* ###################################################
-                TEXT
- ################################################### */
+
 
  a:link {
-     color: var(-site-combo-link);
+     color: var(--site-lnk);
      text-decoration: none;
  }
 
  a:visited {
-     color: var(--site-combo-visited);
+     color: var(--site-lnk-visited);
      text-decoration: none;
  }
 
  a:hover {
-     color: var(--site-combo-hover);
-     text-decoration: none;
+     color: var(--site-lnk-hover);
+     text-decoration: underline;
  }
 
-
+ /* ###################################################
+                NAV
+ ################################################### */
 
  /* Style the top navigation bar */
  .topnav {
@@ -148,6 +149,7 @@
 
  }
 
+
  .card p {
      color: --body-text;
  }
@@ -184,6 +186,14 @@
 
  .card h5 {
      color: var(--body-text);
+ }
+
+ .card ul {
+    padding-left: 1.5rem;
+ }
+ .card li {
+     list-style-type: none;
+     
  }
 
  /* ###################################################
