@@ -12,12 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./css/one_page_website.css" />
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet" />
     <style>
-        #imgLogo {
-            display: inline;
-            max-width: 100%;
-            height: auto;
-            margin: 4px;
-        }
+        
     </style>
 
     <script>
@@ -29,7 +24,7 @@
     <header>
         <div style="font-size: 2em;">
             <div style="width: 100%;display: inline-flex;">
-                <div style="width: 120px;"><img id="imgLogo" src="./images/Logo1.png" alt="Logo"></div>
+                <div style="width: 120px;"><img class="site-logo" src="./images/Logo2.png" alt="Logo"></div>
                 <div class="site-title">AI Terms</div>
                 <div style="width: 120px;"></div>
             </div>
@@ -143,12 +138,36 @@
                             <input id="phone" type="tel" placeholder="Phone Number" class="form-textbox"
                                 style="margin-bottom: 5px;">
                             <div>
-                                <label class="image-checkbox">
-                                    <input id="newsletter" type="checkbox" name="custom-font-check" />
-                                    <span class="custom-icon"></span>
-                                    Would you like to recieve our monthly newsletter
+
+                                <label class="svg-checkbox">
+                                    <input type="checkbox" name="dynamic-check" />
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                        <!-- Unchecked Question Mark -->
+                                        <g class="question-mark">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                            <!-- Dot for the question mark -->
+                                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                        </g>
+
+                                        <!-- Checked Smiley Face -->
+                                        <g class="smiley-face">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <!-- Eyes -->
+                                            <path d="M8 9h.01"></path>
+                                            <path d="M16 9h.01"></path>
+                                            <!-- Smile -->
+                                            <path d="M8 15c1.5 2 6.5 2 8 0"></path>
+                                        </g>
+
+                                    </svg>
+                                    <!-- toggle these messages -->
+                                    <span class="text-unchecked">Click to receive our monthly newsletter!</span>
+                                    <span class="text-checked">Our monthly news letter is setup for delivery!</span>
                                 </label>
-                                
+
                             </div>
                             <textarea placeholder="Type the message ...." class="form-textbox-multiline"></textarea>
                             <input type="submit" value="Submit" class="form-submission-button">

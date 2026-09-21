@@ -94,6 +94,14 @@
                 NAV
  ################################################### */
 
+
+.site-logo {
+            display: inline;
+            max-width: 100%;
+            height: auto;
+            margin: 4px;
+        }
+
  /* Style the top navigation bar */
  .topnav {
      overflow: hidden;
@@ -180,18 +188,21 @@
 
  .card h2 {
      color: var(--body-text);
+     letter-spacing: .2rem;
  }
 
  .card h5 {
      color: var(--body-text);
+     letter-spacing: .2rem;
  }
 
  .card ul {
-    padding-left: 1.5rem;
+     padding-left: 1.5rem;
  }
+
  .card li {
      list-style-type: none;
-     
+
  }
 
  /* ###################################################
@@ -255,43 +266,81 @@
  }
 
 
-/* Upgrade the checkbox - The default is not very customizable from what I remember
+ /* Upgrade the checkbox - The default is not very customizable from what I remember
 I always liked the custom ones */
 
-.image-checkbox {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: 'Pangolin', cursive; 
-  font-size: 1.2rem;
-  user-select: none;
-}
+ .svg-checkbox {
+     display: inline-flex;
+     align-items: center;
+     cursor: pointer;
+     font-family: 'Pangolin', cursive;
+     font-size: 1.2rem;
+     user-select: none;
 
-/* hide normal checkbox */
-.image-checkbox input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+     /* Applying the CSS variable for the default text and SVG color */
+     color: var(--body-text);
+     transition: color 0.2s ease;
+ }
 
-/* unchecked */
-.image-checkbox .custom-icon {
-  width: 64px; 
-  height: 64px;
-  margin-right: 10px;
-  background-image: url('../images/unchecked-image.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+ /* Applying a secondary variable for hover interactions */
+ .svg-checkbox:hover {
+     color: var(--site-title);
+ }
 
-/* Checked state */
-/* First time using ~ sibling */
-.image-checkbox input[type="checkbox"]:checked ~ .custom-icon {
-  background-image: url('../images/checked-image.png');
-}
+ .svg-checkbox input[type="checkbox"] {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+ }
+
+ .check-icon {
+     width: 28px;
+     height: 28px;
+     margin-right: 10px;
+ }
+
+ /* Set up the transitions for smooth switching */
+ .check-icon .question-mark,
+ .check-icon .smiley-face {
+     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     transform-origin: center;
+ }
+
+ /* Hide the smiley face completely by default */
+ .check-icon .smiley-face {
+     opacity: 0;
+     transform: scale(0.5) rotate(-45deg);
+ }
+
+ /* Fade out and shrink the question mark when checked */
+ .svg-checkbox input[type="checkbox"]:checked~.check-icon .question-mark {
+     opacity: 0;
+     transform: scale(0.5) rotate(45deg);
+ }
+
+ /* Fade in and expand the smiley face when checked */
+ .svg-checkbox input[type="checkbox"]:checked~.check-icon .smiley-face {
+     opacity: 1;
+     transform: scale(1) rotate(0);
+ }
+
+ /* 
+  Text Toggling Logic 
+  Uses the same ~ combinator to show/hide the span elements 
+*/
+ .text-checked {
+     display: none;
+ }
+
+ .svg-checkbox input[type="checkbox"]:checked~.text-unchecked {
+     display: none;
+ }
+
+ .svg-checkbox input[type="checkbox"]:checked~.text-checked {
+     display: inline;
+ }
 
 
  /* ###################################################
@@ -301,8 +350,8 @@ I always liked the custom ones */
      color: var(--body-text);
      text-align: left;
      margin-bottom: 16px;
-     line-height: 2.1;
-     letter-spacing: 0.5px;
+     line-height: 1.4;
+     
  }
 
  p::first-letter {
