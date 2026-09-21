@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>AI Dictionary</title>
+    <title>AI TERMS </title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="M@" />
     <meta http-equiv="Page-Enter" content="blendTrans(Duration=2)" />
     <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
@@ -11,53 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./css/one_page_website.css" />
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet" />
     <style>
-
-
-        #imgLogo {
-            display: inline;
-            max-width: 100%;
-            height: auto;
-            margin: 4px;
-        }
-
-      
-
-
-        /* Add a card effect for articles */
-        .card {
-
-            background-color: var(--col-card-bg);
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 4px;
-
-        }
-
-        .card p {
-            color: --body-text;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Footer */
-        .footer {
-            padding: 20px;
-            text-align: center;
-            background: var(--site-footer);
-            margin-top: 20px;
-        }
-
-       
-
         
-
-       
-       
     </style>
 
     <script>
@@ -67,9 +22,9 @@
 
 <body id="body_style">
     <header>
-        <div font-size: 2em;">
+        <div style="font-size: 2em;">
             <div style="width: 100%;display: inline-flex;">
-                <div style="width: 120px;"><img id="imgLogo" src="./images/Logo1.png" alt="Logo"></div>
+                <div style="width: 120px;"><img class="site-logo" src="./images/Logo2.png" alt="Logo"></div>
                 <div class="site-title">AI Terms</div>
                 <div style="width: 120px;"></div>
             </div>
@@ -90,6 +45,9 @@
 
     <main style="padding-top: 0px;">
         <div class="row">
+            <!-- ==================================================================
+                                LEFT COL
+            ================================================================== -->
             <div class="leftcolumn">
                 <div class="card">
                     <div id="1"></div>
@@ -106,7 +64,12 @@
                     <div id="2"></div>
                     <h2>TITLE HEADING</h2>
                     <h5>Title description, Sep 2, 2027</h5>
-                    <div class="fakeimg" style="height: 200px;">Image</div>
+                    <div>
+                        <div>
+                            <div class="img" style="height: 200px;">Image</div>
+                        </div>
+
+                    </div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -116,41 +79,54 @@
                     <div id="3"></div>
                     <h2>TITLE HEADING</h2>
                     <h5>Title description, Sep 2, 2027</h5>
-                    <div class="fakeimg" style="height: 200px;">Image</div>
+                    <div class="img" style="height: 200px;">Image</div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                         nostrud exercitation ullamco.</p>
                 </div>
             </div>
+            <!-- ==================================================================
+                                RIGHT COL
+            ================================================================== -->
             <div class="rightcolumn">
                 <div class="card">
-                    <div style="min-width:300px;">
-                        <h2>Fixxed Content Size</h2>
-                        <div class="fakeimg" style="height: 100px;">Image</div>
-                        <p>Fixxed content size in flex percent area</p>
+                    <div>
+                        <h2>Categories</h2>
+                        <ul>
+                            <li>Models</li>
+                            <li>Agentic</li>
+                            <li>Training</li>
+                            <li>Hardware</li>
+                            <li>Breakthoughs</li>
+                            <li>Benchmarks</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Top Terms</h3>
+                    <h2>AI Youtube</h2>
+                    <ul>
+                        <li><a href="https://www.youtube.com/@AIDailyBrief" target="_blank">The AI Daily Brief</a></li>
+                        <li><a href="https://www.youtube.com/@NateBJones" target="_blank">AI News & Strategy Daily</a>
+                        </li>
+                        <li><a href="https://www.youtube.com/@matthew_berman" target="_blank">Matthew Merman</a></li>
+                        <li><a href="https://www.youtube.com/@mreflow" target="_blank">Matt Wolfe</a></li>
+                        <li><a href="https://www.youtube.com/@WesRoth" target="_blank">Wes Roth</a></li>
+                        <li><a href="" target="_blank"></a></li>
+                    </ul>
 
                 </div>
                 <div class="card">
-                    <h3>Video</h3>
-                    <div>
-                        <h3>Vedeos</h3>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube-nocookie.com/embed/TfndsbIWuWI?autoplay=1&mute=1"
-                                title="Soccer Sol" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-
-                        </div>
+                    <h2>Featured</h2>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/TfndsbIWuWI?autoplay=1&mute=1"
+                            title="Soccer Sol" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Contact</h3>
-                    <p>
                     <form>
                         <div style="display: inline-block;">
                             <input id="firstname" type="text" placeholder="First Name" class="form-textbox"
@@ -162,15 +138,41 @@
                             <input id="phone" type="tel" placeholder="Phone Number" class="form-textbox"
                                 style="margin-bottom: 5px;">
                             <div>
-                                <input type="checkbox" id="Newsletter" class="form-checkbox"
-                                    style="margin-bottom: 5px;">
-                                Would you like to recieve our monthly newsletter
+
+                                <label class="svg-checkbox">
+                                    <input type="checkbox" name="dynamic-check" />
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                        <!-- Unchecked Question Mark -->
+                                        <g class="question-mark">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                            <!-- Dot for the question mark -->
+                                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                        </g>
+
+                                        <!-- Checked Smiley Face -->
+                                        <g class="smiley-face">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <!-- Eyes -->
+                                            <path d="M8 9h.01"></path>
+                                            <path d="M16 9h.01"></path>
+                                            <!-- Smile -->
+                                            <path d="M8 15c1.5 2 6.5 2 8 0"></path>
+                                        </g>
+
+                                    </svg>
+                                    <!-- toggle these messages -->
+                                    <span class="text-unchecked">Click to receive our monthly newsletter!</span>
+                                    <span class="text-checked">Our monthly news letter is setup for delivery!</span>
+                                </label>
+
                             </div>
                             <textarea placeholder="Type the message ...." class="form-textbox-multiline"></textarea>
                             <input type="submit" value="Submit" class="form-submission-button">
                         </div>
                     </form>
-                    </p>
                 </div>
             </div>
         </div>

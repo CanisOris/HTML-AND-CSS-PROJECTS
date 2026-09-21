@@ -1,0 +1,114 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Sprite Checkbox - Animated Box</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --body-bg: #1e1e24;
+      --col-card-bg: #59768f;
+      --body-text: #e6e6eb;
+    }
+
+    body {
+      background-color: var(--body-bg);
+      color: var(--body-text);
+      font-family: 'Pangolin', cursive;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .svg-toggle {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      user-select: none;
+      color: var(--body-text);
+      transition: color 0.2s ease;
+      width: fit-content;
+    }
+
+    .svg-toggle:hover {
+      color: var(--col-card-bg);
+    }
+
+    .svg-toggle input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .svg-toggle .icon {
+      width: 26px;
+      height: 26px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================
+       Sprite Instance Animations via CSS Variables
+       ========================================== */
+    
+    /* 1. Define the default state variables on the <use> tag */
+    .box-use-tag {
+      --check-offset: 24;      /* Hides the checkmark initially */
+      --box-bg-opacity: 0;     /* Keeps the background transparent */
+    }
+
+    /* 2. Change the variables when the hidden input is checked */
+    .svg-toggle input[type="checkbox"]:checked ~ .box-icon .box-use-tag {
+      --check-offset: 0;       /* Draws the checkmark */
+      --box-bg-opacity: 0.15;  /* Lightly fills the box background */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+    The Hidden SVG Symbol.
+    Notice how the inline styles use var() to listen for the CSS variables we defined above!
+  -->
+  <svg style="display: none;">
+    <symbol id="animated-box-symbol" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="4" style="fill: currentColor; fill-opacity: var(--box-bg-opacity); transition: fill-opacity 0.3s ease;"></rect>
+      <path d="M8 12l3 3 5-6" style="stroke-dasharray: 24; stroke-dashoffset: var(--check-offset); transition: stroke-dashoffset 0.3s cubic-bezier(0.4, 0, 0.2, 1);"></path>
+    </symbol>
+  </svg>
+
+  <!-- Reusable Checkbox Instances -->
+  <label class="svg-toggle">
+    <input type="checkbox" name="sub-1" />
+    <svg class="icon box-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <use href="#animated-box-symbol" class="box-use-tag"></use>
+    </svg>
+    Daily Updates
+  </label>
+
+  <label class="svg-toggle">
+    <input type="checkbox" name="sub-2" />
+    <svg class="icon box-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <use href="#animated-box-symbol" class="box-use-tag"></use>
+    </svg>
+    Weekly Digest
+  </label>
+
+  <label class="svg-toggle">
+    <input type="checkbox" name="sub-3" />
+    <svg class="icon box-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <use href="#animated-box-symbol" class="box-use-tag"></use>
+    </svg>
+    Monthly Newsletter
+  </label>
+
+</body>
+</html>
