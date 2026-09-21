@@ -13,11 +13,15 @@
 
      /* shades  */
      --site-title: #184172;
+     --site-light1: #ffffff;
+     --site-dark1: #000000;
+
 
      /* colors by actions */
      --site-lnk: #052041;
      --site-lnk-visited: #223c5c;
      --site-lnk-hover: #99b4d6;
+     --site-highlight-txt: bisque;
 
      --signature: #99b4d6;
      --site-footer: #333;
@@ -95,12 +99,30 @@
  ################################################### */
 
 
-.site-logo {
-            display: inline;
-            max-width: 100%;
-            height: auto;
-            margin: 4px;
-        }
+ .site-logo {
+     display: block;
+     width: 100%;
+     height: auto;
+     margin: 4px;
+ }
+
+ .logo-div {
+     max-width: 120px;
+     width: 25vw;
+ }
+
+ .site-title {
+     color: var(--site-title);
+     font-weight: 900;
+     padding-top: 22px;
+     flex: 1;
+     min-width: 0;
+     white-space: nowrap;
+     /* Prevents the text from wrapping */
+     font-size: clamp(1.5em, 6vw, 3em);
+     /* Scales the text dynamically */
+ }
+
 
  /* Style the top navigation bar */
  .topnav {
@@ -211,52 +233,65 @@
 
  .form-textbox {
      width: 100%;
-     height: 30px;
-     text-indent: 3px;
-     border-radius: 3px;
-     border: solid 1px var(--site-frm-txtbx-border);
-     font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-     font-size: .9em;
+     height: auto;
+     padding: 10px 12px;
+     border-radius: 6px;
+     border: 1px solid var(--site-frm-txtbx-border);
+     font-family: inherit;
+     font-size: 1rem;
+     transition: border-color 0.2s, box-shadow 0.2s;
  }
 
  .form-textbox-multiline {
      width: 100%;
-     text-indent: 3px;
-     border-radius: 3px;
-     border: solid 1px var(--site-frm-txtbx-border);
-     font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-     font-size: .9em;
-     resize: none;
+     padding: 10px 12px;
+     border-radius: 6px;
+     border: 1px solid var(--site-frm-txtbx-border);
+     font-family: inherit;
+     font-size: 1rem;
+     min-height: 100px;
+     resize: vertical;
+     transition: border-color 0.2s, box-shadow 0.2s;
+ }
+
+
+ .form-textbox:focus,
+ .form-textbox-multiline:focus {
+     outline: none;
+     border-color: var(--site-title);
+     box-shadow: 0 0 0 3px rgba(24, 65, 114, 0.2);
  }
 
  .form-submission-button {
      display: inline-block;
-     font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+     font-family: inherit;
      font-weight: 600;
-     text-decoration: none;
-     font-size: 1em;
-     height: 30px;
-     min-width: 90px;
-     border-radius: 3px;
-     color: var(---site-btn-color-txt);
-     background-color: var(--site-btn-bg);
-     border: 1px solid var(--site-btn-border);
-     background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-bg1)), to(var(--site-btn-bg2)));
+     font-size: 1rem;
+     padding: 10px 24px;
+     border-radius: 8px;
+     color: var(--site-light1);
+     background-color: var(--site-title);
+     border: none;
+     cursor: pointer;
+     transition: all 0.2s ease-in-out;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     margin-top: 10px;
  }
 
  .form-submission-button:hover {
-     background-color: var(--site-btn-hover-bg);
-     background: -webkit-gradient(linear, 0 0, 0 100%, from(var(--site-btn-hover-bg1)), to(var(--site-btn-hover-bg2)));
-     border: 1px solid var(--sitee-btn-hover-border);
+     background-color: var(--site-lnk-hover);
+     transform: translateY(-2px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
  }
 
- .form-submission-button:active {
-     background-color: var(--site-btn-focus);
- }
-
+ .form-submission-button:active,
  .form-submission-button:focus {
-     background-color: var(--site-btn-focus);
+     transform: translateY(0);
+     box-shadow: 0 2px 4px var(--site-dark1);
+     outline: none;
  }
+
+
 
  .form-checkbox {
      height: 26px;
@@ -351,7 +386,7 @@ I always liked the custom ones */
      text-align: left;
      margin-bottom: 16px;
      line-height: 1.4;
-     
+
  }
 
  p::first-letter {
@@ -360,8 +395,8 @@ I always liked the custom ones */
 
  /* This is cool I have never used this one before */
  p::selection {
-     background-color: bisque;
-     color: #1e1e24;
+     background-color: var(--site-highlight-txt);
+     color: var(--site-dark1);
  }
 
 
@@ -405,6 +440,7 @@ I always liked the custom ones */
          float: none;
          width: 100%;
      }
+
  }
 
  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -414,5 +450,9 @@ I always liked the custom ones */
      .rightcolumn {
          width: 100%;
          padding: 0;
+     }
+
+     .site-title {
+         font-size: 2.2em;
      }
  }
