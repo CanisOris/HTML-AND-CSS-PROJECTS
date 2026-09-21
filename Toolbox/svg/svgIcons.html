@@ -2,151 +2,154 @@
 <html lang="en">
 
 <head>
-    <title>Test icons and form controls </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="M@" />
-    <meta http-equiv="Page-Enter" content="blendTrans(Duration=2)" />
+  <title>Test icons and form controls </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="M@" />
+  <meta http-equiv="Page-Enter" content="blendTrans(Duration=2)" />
 
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet" />
-    <style>
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding-top: 0;
+      box-sizing: border-box;
+      /* margin negatives not needed */
+    }
 
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding-top: 0;
-            box-sizing: border-box;
-            /* margin negatives not needed */
-        }
+    html {
+      /* remove scroll bar x */
+      overflow-x: hidden;
+      /* smooth your scroll, ohh yeah */
+      scroll-behavior: smooth;
+    }
 
-        html {
-            /* remove scroll bar x */
-            overflow-x: hidden;
-            /* smooth your scroll, ohh yeah */
-            scroll-behavior: smooth;
-        }
+    body {
+      font-family: "Pangolin", cursive;
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      background-color: var(--body-bg);
+      color: var(--site-title);
+    }
 
-        body {
-            font-family: "Pangolin", cursive;
-            font-size: 24px;
-            margin: 0;
-            padding: 0;
-            background-color: var(--body-bg);
-            color: var(--site-title);
-        }
-/* ########################################################################################## */
+    /* ########################################################################################## */
 
-   /* Ensure your variables are defined at the top of your stylesheet */
-:root {
-  --body-bg: #1e1e24;
-  --col-card-bg: #59768f;
-  --body-text: #e6e6eb;
-}
+    /* Ensure your variables are defined at the top of your stylesheet */
+    :root {
+      --body-bg: #1e1e24;
+      --col-card-bg: #59768f;
+      --body-text: #e6e6eb;
+    }
 
-/* Base Label Styling */
-.svg-toggle {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: 'Pangolin', cursive;
-  font-size: 1.2rem;
-  user-select: none;
-  color: var(--body-text);
-  transition: color 0.2s ease;
-}
+    /* Base Label Styling */
+    .svg-toggle {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      font-family: 'Pangolin', cursive;
+      font-size: 1.2rem;
+      user-select: none;
+      color: var(--body-text);
+      transition: color 0.2s ease;
+    }
 
-.svg-toggle:hover {
-  color: var(--col-card-bg);
-}
+    .svg-toggle:hover {
+      color: var(--col-card-bg);
+    }
 
-/* Visually hide the native checkbox */
-.svg-toggle input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+    /* Visually hide the native checkbox */
+    .svg-toggle input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
 
-/* Base SVG Icon Styling */
-.svg-toggle .icon {
-  width: 26px;
-  height: 26px;
-  margin-right: 10px;
-  flex-shrink: 0;
-}
+    /* Base SVG Icon Styling */
+    .svg-toggle .icon {
+      width: 26px;
+      height: 26px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
 
-/* ==========================================
+    /* ==========================================
    Heart Toggle Animations
    ========================================== */
-.heart-icon .heart-path {
-  transition: fill 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-origin: center;
-}
+    .heart-icon .heart-path {
+      transition: fill 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform-origin: center;
+    }
 
-/* Fill solid and scale up when checked */
-.svg-toggle input[type="checkbox"]:checked ~ .heart-icon .heart-path {
-  fill: currentColor;
-  transform: scale(1.15);
-}
+    /* Fill solid and scale up when checked */
+    .svg-toggle input[type="checkbox"]:checked~.heart-icon .heart-path {
+      fill: currentColor;
+      transform: scale(1.15);
+    }
 
-/* ==========================================
+    /* ==========================================
    Standard Box Animations
    ========================================== */
-/* Setup the checkmark to look like it's being drawn */
-.box-icon .box-check {
-  stroke-dasharray: 24;
-  stroke-dashoffset: 24;
-  transition: stroke-dashoffset 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    /* Setup the checkmark to look like it's being drawn */
+    .box-icon .box-check {
+      stroke-dasharray: 24;
+      stroke-dashoffset: 24;
+      transition: stroke-dashoffset 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.box-icon .box-outline {
-  transition: fill 0.3s ease;
-}
+    .box-icon .box-outline {
+      transition: fill 0.3s ease;
+    }
 
-/* Draw the checkmark */
-.svg-toggle input[type="checkbox"]:checked ~ .box-icon .box-check {
-  stroke-dashoffset: 0;
-}
+    /* Draw the checkmark */
+    .svg-toggle input[type="checkbox"]:checked~.box-icon .box-check {
+      stroke-dashoffset: 0;
+    }
 
-/* Optional: lightly fill the box background when checked */
-.svg-toggle input[type="checkbox"]:checked ~ .box-icon .box-outline {
-  fill: currentColor;
-  fill-opacity: 0.15;
-}
-
-    </style>
+    /* Optional: lightly fill the box background when checked */
+    .svg-toggle input[type="checkbox"]:checked~.box-icon .box-outline {
+      fill: currentColor;
+      fill-opacity: 0.15;
+    }
+  </style>
 
 </head>
 
 <body>
 
-<br><br>
+  <br><br>
 
   <!-- Include this in your <head> if you haven't already -->
-<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 
-<!-- Heart Toggle Checkbox -->
-<label class="svg-toggle">
-  <input type="checkbox" name="favorite-check" />
-  <svg class="icon heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" class="heart-path"></path>
-  </svg>
-  Add to Favorites
-</label>
+  <!-- Heart Toggle Checkbox -->
+  <label class="svg-toggle">
+    <input type="checkbox" name="favorite-check" />
+    <svg class="icon heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        class="heart-path"></path>
+    </svg>
+    Add to Favorites
+  </label>
 
-<br><br>
+  <br><br>
 
-<!-- Standard Animated Checkbox -->
-<label class="svg-toggle">
-  <input type="checkbox" name="standard-check" />
-  <svg class="icon box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="3" y="3" width="18" height="18" rx="4" class="box-outline"></rect>
-    <path d="M8 12l3 3 5-6" class="box-check"></path>
-  </svg>
-  Subscribe to Newsletter
-</label>
+  <!-- Standard Animated Checkbox -->
+  <label class="svg-toggle">
+    <input type="checkbox" name="standard-check" />
+    <svg class="icon box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="4" class="box-outline"></rect>
+      <path d="M8 12l3 3 5-6" class="box-check"></path>
+    </svg>
+    Subscribe to Newsletter
+  </label>
 
 
 
