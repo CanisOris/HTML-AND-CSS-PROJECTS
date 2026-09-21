@@ -8,7 +8,7 @@
  :root {
 
      --body-bg: #1e1e24;
-     --col-card-bg: #59768f;
+     --col-card-bg: #446078;
      --body-text: #e6e6eb;
 
      /* shades  */
@@ -89,9 +89,12 @@
      text-decoration: none;
  }
 
- a:hover {
+ a:hover,
+ a:focus-visible {
      color: var(--site-lnk-hover);
      text-decoration: underline;
+     outline: 2px dashed var(--site-title);
+     outline-offset: 2px;
  }
 
  /* ###################################################
@@ -141,10 +144,12 @@
  }
 
  /* Change color on hover */
- .topnav a:hover {
+.topnav a:hover,
+ .topnav a:focus-visible {
      background-color: var(--site-nav-top-btn-hover);
-     ;
-     color: black;
+     color: var(--site-dark1);
+     outline: 2px solid var(--site-highlight-txt);
+     outline-offset: -2px;
  }
 
  /* Create two unequal columns that floats next to each other */
@@ -234,7 +239,8 @@
  .form-textbox {
      width: 100%;
      height: auto;
-     padding: 10px 12px;
+     /* padding: 10px 12px; */
+     margin: 10px 12px;
      border-radius: 6px;
      border: 1px solid var(--site-frm-txtbx-border);
      font-family: inherit;
@@ -244,7 +250,8 @@
 
  .form-textbox-multiline {
      width: 100%;
-     padding: 10px 12px;
+     /* padding: 10px 12px; */
+     margin: 10px 12px;
      border-radius: 6px;
      border: 1px solid var(--site-frm-txtbx-border);
      font-family: inherit;
@@ -322,12 +329,19 @@ I always liked the custom ones */
      color: var(--site-title);
  }
 
- .svg-checkbox input[type="checkbox"] {
+.svg-checkbox input[type="checkbox"] {
      position: absolute;
      opacity: 0;
      cursor: pointer;
      height: 0;
      width: 0;
+ }
+
+ /* add keyboard access */
+ .svg-checkbox input[type="checkbox"]:focus-visible ~ .check-icon {
+     outline: 3px solid var(--site-title);
+     outline-offset: 2px;
+     border-radius: 50%;
  }
 
  .check-icon {

@@ -1,0 +1,37 @@
+Structure & Semantics
+
+Define a single <h1> per page to establish the core topic for assistive technologies.
+
+Nest headings sequentially (<h2> to <h6>) without skipping levels to maintain a logical document outline.
+
+Eliminate empty anchor tags or buttons that create silent, confusing tab-stops for screen readers.
+
+
+Forms & Inputs
+
+Pair every input, textarea, and select menu with a programmatic label (using <label for="..."> linked to an id, or an aria-label).
+
+Avoid relying on placeholder attributes as the sole identifier for form fields, as they frequently disappear on focus and are often ignored by screen readers.
+
+
+Keyboard Navigation
+
+Ensure every interactive element is reachable and operable via the keyboard alone (Tab, Enter, Space).
+
+Define explicit :focus-visible CSS states, particularly for custom UI components (like hidden default checkboxes) where native browser focus rings are overridden.
+
+
+Media & SVGs
+
+Write alt text that conveys the functional purpose or informational content of an image rather than describing visual aesthetics.
+
+Apply aria-hidden="true" to purely decorative SVGs or icons to prevent screen readers from announcing raw geometric shapes out of context.
+
+Omit autoplay attributes on video iframes and media elements to prevent disruptive audio or motion, respecting cognitive accessibility guidelines.
+
+Add descriptive title attributes to all <iframe> elements to explicitly announce the embedded content.
+
+
+Color & Contrast
+
+Maintain a minimum WCAG AA contrast ratio of 4.5:1 for standard text against its background container.
