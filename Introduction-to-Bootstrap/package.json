@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "bootstrap": "^5.3.8"
+    "bootstrap-latest": "npm:bootstrap@^5.3.8",
+    "bootstrap-legacy": "npm:bootstrap@^5.2.3"
   }
 }
