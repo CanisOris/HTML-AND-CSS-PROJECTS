@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
 
 :root {
     --main-color: rgb(126, 133, 130);
@@ -17,7 +18,7 @@
     --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
     
     --main-font-family: 'Passion One', sans-serif;
-
+    --secondary-font-family: "Yesteryear", cursive;
 }
 
 
@@ -128,7 +129,7 @@ body {
     padding-top: 150px;
 }
 
-h1, h3, p{
+h1, h3, h4, p{
     cursor: default;
 }
 
@@ -146,6 +147,11 @@ h3{
     font-size: 50px;
 }
 
+h4{
+    font-family:var(--secondary-font-family); 
+     font-size: 25px;
+}
+
 b{
    font-weight: 600;
 
@@ -153,4 +159,29 @@ b{
 
 .container{
     padding: 100px;
+}
+
+/* buttons  */
+.btn {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    font-size: 18px;
+}
+
+CSS
+.btn:focus {
+    border-color: transparent; /* Overrides Bootstraps dark border when the user clicks on the button*/
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+.btn:hover {
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
 }
