@@ -12,7 +12,10 @@
     --nav-link-hover-shadow:  rgb(255, 123, 0, 0.6);
     --nav-drowdown-shadow:  rgb(0, 0, 0, 0.4);
     --nav-drowdown-item-border:  rgb(117, 77, 13);
-/* FONTS */
+
+    --bs-border-width: 1px;
+    --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
+    
     --main-font-family: 'Passion One', sans-serif;
 
 }
@@ -83,5 +86,39 @@ body {
 .dropdown-item:hover, .dropdown-item:focus{
     color: var(--accent-text-color);
     background-color: var(--main-color);
+}
+
+
+/* overwrite */
+
+.navbar-toggler {
+    border: none;
+    transition: 0.5s ease;
+  /* padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-navbar-color);
+  background-color: transparent;
+  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition); */
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) rgb(98, 0, 0);
+    transition: 0.5s ease;
+
+}
+
+.navbar-toggler-icon {
+  /* display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle; */
+  /* note: instead I overwrote the var above */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28237, 192, 3%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%; */
 }
 
