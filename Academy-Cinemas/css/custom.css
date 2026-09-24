@@ -122,3 +122,20 @@ body {
   background-size: 100%; */
 }
 
+/* header */
+#header-image{
+    padding-top: 150px;
+}
+
+/* generral styling */
+h1{
+    font-family: var(--main-font-family);
+    color: var(--main-color-accent);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    text-align: center;
+    font-size: 100px;
+}
+
+.container{
+    padding: 100px;
+}
