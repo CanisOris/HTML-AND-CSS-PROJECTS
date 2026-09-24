@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>Academy Cinemas</title>
     <link rel="stylesheet" href="node_modules/bootstrap-legacy/dist/css/bootstrap.min.css">
     <link href="./css/custom.css" rel="stylesheet">
@@ -12,10 +12,9 @@
 </head>
 
 <body>
-    <!-- Bootstrap javascript -->
-    <script src="node_modules/bootstrap-legacy/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- nav-bar -->
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Academy Cinemas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -41,7 +40,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -50,16 +49,32 @@
         <img id="header-image" src="images/logo.png" class="img-fluid col-lg-6" alt="Acad Cin Logo">
     </header>
     <!-- now playing -->
-     <section>
+    <section>
         <div class="container">
             <h1>Now Playing</h1>
-            <div class="d-flex flex-row" id="ben-hur">
+            <div class="d-flex flex-row flex-wrap" id="ben-hur">
                 <div class="col-lg-5">
                     <img src="images/ben-hur.jpg" class="img-fluid" alt="ben hur poster">
                 </div>
+                <!-- Moved the card inside the d-flex container so they sit together -->
+                <div class="card col-lg-5 mx-auto">
+                    <div class="card-body">
+                        <h3 class="card-title">Ben-Hur</h3>
+                        <p class="lead">
+                            After a Jewish prince is betrayed and sent into slavery by a Roman friend in
+                            1st-century Jerusalem, he regains his freedom and comes back for revenge.
+                            <br><br>
+                            <b>Director:</b> William Wyler
+                            <br>
+                            <b>Starring:</b> Charlton Heston | Jack Hawkins | Stephen Boyd
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-     </section>
+    </section>
+    <!-- Bootstrap javascript -->
+    <script src="node_modules/bootstrap-legacy/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
