@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap Local Installation Guide</title>
@@ -12,6 +13,7 @@
             margin: 0;
             padding: 40px;
         }
+
         .container {
             max-width: 1100px;
             margin: auto;
@@ -20,34 +22,41 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
+
         h1 {
             color: #1a252f;
             border-bottom: 2px solid #eaecef;
             padding-bottom: 15px;
             margin-top: 0;
         }
+
         h2 {
             color: #1a252f;
             border-bottom: 2px solid #eaecef;
             padding-bottom: 10px;
             margin-top: 40px;
         }
+
         p.subtitle {
             color: #7f8c8d;
             font-size: 1.1em;
             margin-bottom: 30px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
             margin-bottom: 20px;
         }
-        th, td {
+
+        th,
+        td {
             padding: 14px 16px;
             text-align: left;
             border-bottom: 1px solid #e1e4e8;
         }
+
         th {
             background-color: #2c3e50;
             color: #ffffff;
@@ -56,12 +65,15 @@
             font-size: 0.85em;
             letter-spacing: 0.05em;
         }
+
         tr:nth-child(even) {
             background-color: #f8f9fa;
         }
+
         tr:hover {
             background-color: #f1f4f8;
         }
+
         code {
             background-color: #eef2f5;
             padding: 3px 6px;
@@ -70,6 +82,7 @@
             font-size: 0.9em;
             color: #c7254e;
         }
+
         pre {
             background-color: #2c3e50;
             color: #ecf0f1;
@@ -78,16 +91,19 @@
             overflow-x: auto;
             font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
         }
+
         pre code {
             background-color: transparent;
             color: inherit;
             padding: 0;
         }
+
         .command-highlight {
             font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
             font-weight: bold;
             color: #2980b9;
         }
+
         .issue-card {
             background-color: #fff9e6;
             border-left: 5px solid #f1c40f;
@@ -95,18 +111,22 @@
             margin-top: 20px;
             border-radius: 4px;
         }
+
         .issue-card.info {
             background-color: #ebf5fb;
             border-left-color: #3498db;
         }
+
         .issue-card h3 {
             margin-top: 0;
             color: #d35400;
             font-size: 1.2em;
         }
+
         .issue-card.info h3 {
             color: #2980b9;
         }
+
         .footer {
             margin-top: 30px;
             font-size: 0.9em;
@@ -115,11 +135,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Bootstrap Local Installation Guide</h1>
-        <p class="subtitle">A technical reference for mapping PowerShell setup steps to local project deployment and notes.[cite: 4]</p>
-        
+        <p class="subtitle">A technical reference for mapping PowerShell setup steps to local project deployment and
+            notes.</p>
+
         <table>
             <thead>
                 <tr>
@@ -133,26 +155,28 @@
                 <tr>
                     <td>1. Initialize NPM</td>
                     <td><span class="command-highlight">npm init -y</span></td>
-                    <td>Creates a <code>package.json</code> file to track project-specific configurations.[cite: 4]</td>
-                    <td>A new <code>package.json</code> file appears in the Introduction-to-Bootstrap folder.[cite: 4]</td>
+                    <td>Creates a <code>package.json</code> file to track project-specific configurations.</td>
+                    <td>A new <code>package.json</code> file appears in the Introduction-to-Bootstrap folder.</td>
                 </tr>
                 <tr>
                     <td>2. Install Bootstrap</td>
                     <td><span class="command-highlight">npm install bootstrap</span></td>
-                    <td>Downloads the framework locally without affecting global system paths.[cite: 4]</td>
-                    <td>A <code>node_modules</code> folder and <code>package-lock.json</code> are created.[cite: 4]</td>
+                    <td>Downloads the framework locally without affecting global system paths.</td>
+                    <td>A <code>node_modules</code> folder and <code>package-lock.json</code> are created.</td>
                 </tr>
                 <tr>
                     <td>3. Git Ignore Setup</td>
                     <td><span class="command-highlight">echo "node_modules/" > .gitignore</span></td>
-                    <td>Generates a file instructing GitHub to ignore tracking the massive dependency folder.[cite: 4]</td>
-                    <td>Running <code>git status</code> will not list <code>node_modules/</code> as an untracked file.[cite: 4]</td>
+                    <td>Generates a file instructing GitHub to ignore tracking the massive dependency folder.</td>
+                    <td>Running <code>git status</code> will not list <code>node_modules/</code> as an untracked file.
+                    </td>
                 </tr>
                 <tr>
                     <td>4. Link Framework</td>
-                    <td><code>&lt;link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"&gt;</code></td>
-                    <td>Connects the locally installed Bootstrap CSS framework directly into your webpage layout.[cite: 4]</td>
-                    <td>Pasted into the <code>&lt;head&gt;</code> of index.html; page styling updates immediately.[cite: 4]</td>
+                    <td><code>&lt;link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"&gt;</code>
+                    </td>
+                    <td>Connects the locally installed Bootstrap CSS framework directly into your webpage layout.</td>
+                    <td>Pasted into the <code>&lt;head&gt;</code> of index.html; page styling updates immediately.</td>
                 </tr>
             </tbody>
         </table>
@@ -161,25 +185,33 @@
 
         <div class="issue-card info">
             <h3>Installing a Specific Version</h3>
-            <p>If course materials require an exact legacy version (e.g., 5.2.3), you can target it directly to overwrite the latest version:</p>
+            <p>If course materials require an exact legacy version (e.g., 5.2.3), you can target it directly to
+                overwrite the latest version:</p>
             <pre><code>npm install bootstrap@5.2.3</code></pre>
         </div>
 
         <div class="issue-card info">
             <h3>Running Multiple Versions (Aliases)</h3>
-            <p>To safely test a newer version alongside course materials without breaking paths, use NPM aliases to create uniquely named folders inside <code>node_modules</code>. <em>Note: Always run <code>npm uninstall bootstrap</code> first to clear the default directory.</em></p>
+            <p>To safely test a newer version alongside course materials without breaking paths, use NPM aliases to
+                create uniquely named folders inside <code>node_modules</code>. <em>Note: Always run
+                    <code>npm uninstall bootstrap</code> first to clear the default directory.</em></p>
             <pre><code>npm uninstall bootstrap
 npm install bootstrap-legacy@npm:bootstrap@5.2.3
 npm install bootstrap-latest@npm:bootstrap@latest</code></pre>
-            <p><strong>Path Updates:</strong> When linking files in your HTML document, you must update the path to match the alias. For example:</p>
+            <p><strong>Path Updates:</strong> When linking files in your HTML document, you must update the path to
+                match the alias. For example:</p>
             <ul>
-                <li><code>&lt;link rel="stylesheet" href="node_modules/bootstrap-legacy/dist/css/bootstrap.min.css"&gt;</code></li>
-                <li><code>&lt;script src="node_modules/bootstrap-legacy/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></li>
+                <li><code>&lt;link rel="stylesheet" href="node_modules/bootstrap-legacy/dist/css/bootstrap.min.css"&gt;</code>
+                </li>
+                <li><code>&lt;script src="node_modules/bootstrap-legacy/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
+                </li>
             </ul>
         </div>
 
         <h2>Component Testing</h2>
-        <p>Drop this pre-built component block into your <code>&lt;body&gt;</code> to verify that both the CSS rendering and JavaScript interactivity are functioning. The alert box tests CSS styling and JS dismissibility, while the button tests the JS dropdown behavior.</p>
+        <p>Drop this pre-built component block into your <code>&lt;body&gt;</code> to verify that both the CSS rendering
+            and JavaScript interactivity are functioning. The alert box tests CSS styling and JS dismissibility, while
+            the button tests the JS dropdown behavior.</p>
         <pre><code>&lt;div class="container mt-5"&gt;
   &lt;!-- CSS Test: Render as a stylized blue box --&gt;
   &lt;div class="alert alert-primary alert-dismissible fade show shadow-sm" role="alert"&gt;
@@ -200,20 +232,57 @@ npm install bootstrap-latest@npm:bootstrap@latest</code></pre>
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
+        <h2>Online Reference Links (CDN & Package Browsing)</h2>
+        <p>If you prefer to load the files without a local installation or need to inspect the package structure, you
+            can use these online references:</p>
+
+        <div class="issue-card info">
+            <h3>jsDelivr CDN Integration</h3>
+            <p>Link directly to the compiled Bootstrap files hosted on jsDelivr instead of your local
+                <code>node_modules</code> folder:</p>
+            <pre><code>&lt;!-- CSS --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- JavaScript Bundle with Popper --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="issue-card info">
+            <h3>Browse Package Contents Online</h3>
+            <p>To view the exact file structure of the Bootstrap NPM package (equivalent to viewing your local
+                <code>node_modules/bootstrap</code> directory), you can browse these mirrors:</p>
+            <ul>
+                <li><strong>jsDelivr Directory:</strong> <a href="https://cdn.jsdelivr.net/npm/bootstrap/"
+                        target="_blank">https://cdn.jsdelivr.net/npm/bootstrap/</a></li>
+                <li><strong>unpkg Directory:</strong> <a href="https://unpkg.com/bootstrap/"
+                        target="_blank">https://unpkg.com/bootstrap/</a></li>
+            </ul>
+        </div>
+
         <h2>Troubleshooting & Issues</h2>
-        
+
         <div class="issue-card">
             <h3>Issue: Git Still Tracking node_modules After Creating .gitignore</h3>
-            <p><strong>Symptoms:</strong> After running <code>echo "node_modules/" > .gitignore</code> in PowerShell, running <code>git status</code> still shows hundreds (e.g., 509) of untracked files inside the <code>node_modules/</code> directory.[cite: 4]</p>
-            <p><strong>Cause:</strong> When using the <code>></code> or <code>echo</code> operators, Windows PowerShell defaults to creating text files using UTF-16 encoding. Git requires standard UTF-8 encoding to correctly read the contents of the <code>.gitignore</code> file. Because Git cannot read the UTF-16 file, it ignores your ignore rules.[cite: 4]</p>
-            <p><strong>Solution:</strong> Recreate the <code>.gitignore</code> file while explicitly forcing UTF-8 encoding using the <code>Set-Content</code> command.[cite: 4]</p>
+            <p><strong>Symptoms:</strong> After running <code>echo "node_modules/" > .gitignore</code> in PowerShell,
+                running <code>git status</code> still shows hundreds (e.g., 509) of untracked files inside the
+                <code>node_modules/</code> directory.</p>
+            <p><strong>Cause:</strong> When using the <code>></code> or <code>echo</code> operators, Windows PowerShell
+                defaults to creating text files using UTF-16 encoding. Git requires standard UTF-8 encoding to correctly
+                read the contents of the <code>.gitignore</code> file. Because Git cannot read the UTF-16 file, it
+                ignores your ignore rules.</p>
+            <p><strong>Solution:</strong> Recreate the <code>.gitignore</code> file while explicitly forcing UTF-8
+                encoding using the <code>Set-Content</code> command.</p>
             <pre><code>Set-Content -Path .gitignore -Value "node_modules/" -Encoding utf8</code></pre>
-            <p><em>Note: If you run <code>git rm -r --cached node_modules</code> and receive a <code>fatal: pathspec 'node_modules' did not match any files</code> error, it simply means Git had not yet staged the folder into its cache, so there was nothing to remove. Forcing the correct encoding is all that is needed.</em>[cite: 4]</p>
+            <p><em>Note: If you run <code>git rm -r --cached node_modules</code> and receive a
+                    <code>fatal: pathspec 'node_modules' did not match any files</code> error, it simply means Git had
+                    not yet staged the folder into its cache, so there was nothing to remove. Forcing the correct
+                    encoding is all that is needed.</em></p>
         </div>
-        
+
         <div class="footer">
-            <p>Generated for Local Environment Setup[cite: 4]</p>
+            <p>Generated for Local Environment Setup</p>
         </div>
     </div>
 </body>
+
 </html>
