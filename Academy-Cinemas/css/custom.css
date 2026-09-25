@@ -1,7 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
+:root {
+    --main-color: rgb(126, 133, 130);
+    --main-color-accent: rgb(237, 192, 3);
+    --main-color-transparent: rgba(126, 133, 130, 0.8);
+    --secondary-color: rgba(128, 0, 0, 0.9);
+    --secondary-color-bottom-border: rgba(128, 0, 0, 0.9);
+    --accent-color: rgb(36, 36, 36);
+    --accent-text-color: rgb(255, 255, 255);
+    /* NAV */
+    --nav-link-hover-shadow: rgb(255, 123, 0, 0.6);
+    --nav-drowdown-shadow: rgb(0, 0, 0, 0.4);
+    --nav-drowdown-item-border: rgb(117, 77, 13);
 
+    --bs-border-width: 1px;
+    --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
+
+    --main-font-family: 'Passion One', sans-serif;
+    --secondary-font-family: "Yesteryear", cursive;
+    --myfoot-font-family: "Caveat", cursive;
+    --myfoot-font-h3-color:rgb(237, 192, 3); 
+}
+
+html {
+    scroll-padding-top: 100px;
+}
 
 body {
     background-image: url(../images/theater-curtains.jpg);
-    background-size: 100%;
+    /* cool stretch */
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow-x: hidden;
+
+}
+
+/* nav bar */
+.navbar {
+    background-color: var(--secondary-color);
+    border-bottom: 5px solid var(--secondary-color-bottom-border);
+    height: 100px;
+}
+
+.navbar-brand {
+    color: var(--main-color-accent);
+    font-family: var(--main-font-family);
+    font-size: 45px;
+    padding-left: 30px;
+}
+
+.nav-link {
+    color: var(--main-color-accent);
+    font-family: var(--main-font-family);
+    font-size: 35px;
+}
+
+/* hover */
+.nav-link:hover {
+    color: var(--main-color-transparent);
+    text-shadow: var(--nav-link-hover-shadow);
+}
+
+.nav-link:focus {
+    color: var(--accent-text-color);
+    text-shadow: var(--nav-link-hover-shadow);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1.5 rem;
+}
+
+/* dropdown menu */
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 16px 2px var(--nav-drowdown-shadow);
+    background-color: var(--main-color);
+    padding: 0;
+}
+
+.dropdown-item {
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    text-align: center;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--nav-drowdown-item-border);
+
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--accent-text-color);
+    background-color: var(--main-color);
+}
+
+
+/* overwrite */
+
+.navbar-toggler {
+    border: none;
+    transition: 0.5s ease;
+    /* padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-navbar-color);
+  background-color: transparent;
+  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition); */
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) rgb(98, 0, 0);
+    transition: 0.5s ease;
+
+}
+
+.navbar-toggler-icon {
+    /* display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle; */
+    /* note: instead I overwrote the var above */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28237, 192, 3%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%; */
+}
+
+/* header */
+#header-image {
+    padding-top: 150px;
+}
+
+h1,
+h3,
+h4,
+h5 p {
+    cursor: default;
+}
+
+/* generral styling */
+h1 {
+    font-family: var(--main-font-family);
+    color: var(--main-color-accent);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    text-align: center;
+    font-size: 100px;
+}
+
+h3 {
+    font-family: var(--main-font-family);
+    font-size: 50px;
+}
+
+.my-footer h3{
+    font-family: var(--myfoot-font-family);
+    color: var(--myfoot-font-h3-color);
+}
+
+h4 {
+    font-family: var(--secondary-font-family);
+    font-size: 25px;
+}
+
+h5 {
+    font-size: 30px;
+    font-family: var(--main-font-family);
+}
+
+b {
+    font-weight: 600;
+
+}
+
+img {
+    border-radius: 5px;
+}
+
+.container {
+    padding: 100px;
+}
+
+.card {
+    border: 5px solid var(--main-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-body {
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.spacer {
+    padding-top: 50px;
+}
+
+
+/* ==================================================================== */
+/* buttons  */
+.btn {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    font-size: 18px;
+}
+
+CSS .btn:focus {
+    border-color: transparent;
+    /* Overrides Bootstraps dark border when the user clicks on the button*/
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+.btn:hover {
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+.yellow-btn {
+    background-color: var(--main-color-accent);
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 25px;
+    color: var(--accent-color);
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.yellow-btn:hover,
+.yellow-btn:focus {
+    background-color: var(--main-color-accent);
+    color: var(--accent-text-color);
+}
+
+
+/* ==================================================================== */
+/* ticket cards */
+#tickets .card {
+    padding: 40px;
+    height: 250px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.form-select {
+    font-family: var(--main-font-family);
+    font-size: 20px;
+    border: 3px solid var(--main-color);
+    transition: border-color 0.5s ease-in;
+}
+
+.form-select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: none;
+    transition: 0.5s ease-in;
+}
+
+/*Select number of tickets input*/
+input[type="number"] {
+    width: 70px;
+    padding: 5px;
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
+    font-family: var(--main-font-family);
+    font-size: 20px;
+    transition: border-color 0.5s ease-in;
+}
+
+input[type="number"]:focus {
+    border: 3px solid var(--secondary-color);
+    transition: 0.5s ease-in;
+    outline: 0;
+}
+
+.form-control {
+    border: 3px solid var(--main-color);
+    transition: 1s ease;
+}
+
+.form-control:focus {
+    color: #212529;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0px .25rem var(--main-color);
+}
+
+#contact-submit {
+    float: right;
+}
+
+footer{
+    border-top: 5px solid var(--main-color);
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0px -15px 0px -15px; /*Extends the footer beyond
+    the webpage on the left and right sides leaving no
+    white space*/
+}
+
+
+
+.footer-text {
+    font-family: var(--main-font-family);
+    color: var(--accent-text-color);
+    font-size: 30px;
+}
+
+.footer-img{
+    width: auto;
+    height: 130px;
 }
