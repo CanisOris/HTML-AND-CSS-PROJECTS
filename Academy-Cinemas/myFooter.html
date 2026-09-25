@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Academy Cinemas</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-legacy/dist/css/bootstrap.min.css">
+    <link href="./css/custom.css" rel="stylesheet">
+    <link href="./css/custom-css-media.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- nav-bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Academy Cinemas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Now Playing
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#ben-hur">Ben Hur</a></li>
+                            <li><a class="dropdown-item" href="#stood-still">The Day the Earth Stood Still</a></li>
+                            <li><a class="dropdown-item" href="#vertigo">Vertigo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tickets">Tickets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="row justify-content-center">
+        <img id="header-image" src="images/logo.png" class="img-fluid col-lg-6" alt="Acad Cin Logo">
+    </header>
+    <!-- now playing -->
+    <section>
+        <div class="container" id="now-playing">
+            <h1>Now Playing</h1>
+            <!-- -------------------------------------------------------------------------------------- -->
+            <div class="d-flex flex-row flex-wrap spacer" id="ben-hur">
+                <div class="col-lg-5 mx-auto">
+                    <img src="images/ben-hur.jpg" class="img-fluid" alt="ben hur poster">
+                </div>
+                <!-- Moved the card inside the d-flex container so they sit together -->
+                <div class="card col-lg-5 mx-auto">
+                    <div class="card-body">
+                        <h3 class="card-title">Ben-Hur</h3>
+                        <p class="lead">
+                            After a Jewish prince is betrayed and sent into slavery by a Roman friend in
+                            1st-century Jerusalem, he regains his freedom and comes back for revenge.
+                            <br><br>
+                            <b>Director:</b> William Wyler
+                            <br>
+                            <b>Starring:</b> Charlton Heston | Jack Hawkins | Stephen Boyd
+                        </p>
+                        <br><br>
+                        <h4 class="card-title">Show Times</h4>
+                        <div class="row">
+                            <div ckass="col">
+                                <button href="#tickets" class="btn" role="button">10:00 AM</button>
+                                <button href="#tickets" class="btn" role="button">11:30 AM</button>
+                                <button href="#tickets" class="btn" role="button">1:10 PM</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div ckass="col">
+                                <button href="#tickets" class="btn" role="button">2:30 PM</button>
+                                <button href="#tickets" class="btn" role="button">4:50 PM</button>
+                                <button href="#tickets" class="btn" role="button">8:00 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- -------------------------------------------------------------------------------------- -->
+            <div class="d-flex flex-row flex-wrap-reverse spacer" id="stood-still">
+
+                <!-- Moved the card inside the d-flex container so they sit together -->
+                <div class="card col-lg-5 mx-auto">
+                    <div class="card-body">
+                        <h3 class="card-title">The Day the Earth Stood Still</h3>
+                        <p class="lead">
+                            An alien lands in Washington, D.C. and tells the people of Earth that they must
+                            live peacefully or be destroyed as a danger to other planets.
+                            <br><br>
+                            <b>Director:</b> Robert Wise
+                            <br>
+                            <b>Starring:</b> Michael Rennie | Patricia Neal | Hugh Marlowe
+                        </p>
+                        <br><br>
+                        <h4 class="card-title">Show Times</h4>
+                        <div class="row">
+                            <div ckass="col">
+                                <button href="#tickets" class="btn" role="button">10:00 AM</button>
+                                <button href="#tickets" class="btn" role="button">11:30 AM</button>
+                                <button href="#tickets" class="btn" role="button">1:10 PM</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div ckass="col">
+                                <button href="#tickets" class="btn" role="button">2:30 PM</button>
+                                <button href="#tickets" class="btn" role="button">4:50 PM</button>
+                                <button href="#tickets" class="btn" role="button">8:00 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mx-auto">
+                    <img src="images/earth-stood-still.jpg" class="img-fluid" alt="earth-stood-still">
+                </div>
+            </div>
+            <!-- -------------------------------------------------------------------------------------- -->
+            <div class="d-flex flex-row flex-wrap spacer" id="vertigo">
+                <div class="col-lg-5 mx-auto">
+                    <img src="images/vertigo.jpg" class="img-fluid" alt="Vertigo poster">
+                </div>
+                <!-- Moved the card inside the d-flex container so they sit together -->
+                <div class="card col-lg-5 mx-auto">
+                    <div class="card-body">
+                        <h3 class="card-title">Vertigo</h3>
+                        <p class="lead">
+                            A former San Francisco police detective juggles wrestling with
+                            his personal demons and becoming obsessed with the hauntingly
+                            beautiful woman he has been hired to trail, who may be deeply disturbed.
+                            <br><br>
+                            <b>Director:</b> Alfred Hitchcock
+                            <br>
+                            <b>Starring:</b> James Stewart | Kim Novak | Barbara Bel Geddes
+                        </p>
+                        <br><br>
+                        <h4 class="card-title">Show Times</h4>
+                        <div class="row">
+                            <div ckass="col">
+                                <button href="#tickets" class="btn" role="button">10:00 AM</button>
+                                <button href="#tickets" class="btn" role="button">11:30 AM</button>
+                                <button href="#tickets" class="btn" role="button">1:10 PM</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div ckass="col">
+                                <button href="#tickets" class="btn" role="button">2:30 PM</button>
+                                <button href="#tickets" class="btn" role="button">4:50 PM</button>
+                                <button href="#tickets" class="btn" role="button">8:00 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================================================= -->
+    <section>
+        <div class="container spacer" id="tickets">
+            <h1>Tickets</h1>
+            <div class="d-flex flex-row flex-wrap">
+                <!-- movie selection -->
+                <div class="col">
+                    <div class="card text-center">
+                        <h5 class="card-title">Please select a movie</h5>
+                        <div class="card-body">
+                            <select class="form-select" aria-label="Movie title selection">
+                                <option selected>Select movie</option>
+                                <option value="1">Ben-Hur</option>
+                                <option value="2">The Day the Earth Stood Still</option>
+                                <option value="3">Vertigo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------------- -->
+                <div class="col">
+                    <div class="card text-center">
+                        <h5 class="card-title">Please select a show time</h5>
+                        <div class="card-body">
+                            <select class="form-select" aria-label="Show time selection">
+                                <option selected>Select time</option>
+                                <option value="1">10:00 AM</option>
+                                <option value="2">11:30 AM</option>
+                                <option value="3">1:10 PM</option>
+                                <option value="4">2:30 PM</option>
+                                <option value="5">4:50 PM</option>
+                                <option value="6">8:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------------- -->
+                <div class="col">
+                    <div class="card text-center">
+                        <h5 class="card-title">Please select number of tickets</h5>
+                        <div class="card-body">
+                            <input type="number" id="quantitiy" value="1" step="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------------------------------------------- -->
+            <!-- ------------------------------------------------------------------- -->
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button type="submit" class="btn yellow-btn">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================================================= -->
+    <section>
+        <div class="container" id="contact">
+            <h1>Contact Us!</h1>
+            <div class="row gy-4">
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="First Name">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="Last Name">
+                </div>
+                <div>
+                    <input class="form-control" type="email" placeholder="Email">
+                </div>
+                <div>
+                    <textarea class="form-control" rows="3" placeholder="Type message here..."></textarea>
+                    <button type="submit" class="btn yellow-btn" id="contact-submit">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ======================================================================= -->
+    <section>
+        <div class="my-footer">
+            <footer class="bg-dark text-light py-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+                            <h3 class="text-uppercase mb-3">Academy Cinemas</h3>
+                            <p class="mb-0 text-white-50" style="line-height: 1.8;">
+                                Opening its brass-handled doors in the vibrant autumn of 1924, Academy Cinemas stood as
+                                the crown
+                                jewel of the city's entertainment district. Originally designed as a lavish vaudeville
+                                palace,
+                                its iconic Art Deco marquee and velvet-draped walls have witnessed a century of magic.
+                                From roaring twenties jazz ensembles and the earliest silver-screen "talkies" to modern
+                                independent premieres, this lovingly restored historic landmark continues to preserve
+                                the
+                                golden age of cinema for generations of dreamers.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4622.708328325954!2d-122.67731172247021!3d45.52085617107501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a068f155555%3A0x4867cea96286fea9!2s310%20SW%204th%20Ave%20Ste%20200%2C%20Portland%2C%20OR%2097204!5e1!3m2!1sen!2sus!4v1790307981489!5m2!1sen!2sus"
+                                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-5 mb-4 border-secondary">
+                    <div class="row">
+                        <div class="col text-center text-secondary small">
+                            &copy; 1924 - 2026 Academy Cinemas. All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- Bootstrap javascript -->
+    <script src="node_modules/bootstrap-legacy/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 :root {
     --main-color: rgb(126, 133, 130);
@@ -19,6 +20,8 @@
 
     --main-font-family: 'Passion One', sans-serif;
     --secondary-font-family: "Yesteryear", cursive;
+    --myfoot-font-family: "Caveat", cursive;
+    --myfoot-font-h3-color:rgb(237, 192, 3); 
 }
 
 html {
@@ -153,6 +156,11 @@ h1 {
 h3 {
     font-family: var(--main-font-family);
     font-size: 50px;
+}
+
+.my-footer h3{
+    font-family: var(--myfoot-font-family);
+    color: var(--myfoot-font-h3-color);
 }
 
 h4 {
@@ -299,6 +307,8 @@ footer{
     the webpage on the left and right sides leaving no
     white space*/
 }
+
+
 
 .footer-text {
     font-family: var(--main-font-family);
