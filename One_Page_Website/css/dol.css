@@ -60,9 +60,7 @@ body {
     min-height: 100vh;
 }
 
-main {
-    flex: 1; 
-}
+
 
  a:link {
      color: var(--site-lnk);
@@ -141,7 +139,44 @@ main {
 }
 
 
- /* Footer */
+
+
+main {
+    flex: 1; 
+}
+
+main ul {
+    list-style-type: none; 
+    padding-left: 20px; 
+    margin: 20px 0;
+    
+}
+
+main ul > li {
+    font-size: 1.1rem; 
+    color: var(--site-lnk-hover); 
+    margin-bottom: 16px; 
+    line-height: 1;
+}
+
+
+main ul ul {
+    list-style-type: none; 
+    padding-left: 30px; 
+    margin-top: 6px;
+}
+
+
+main ul ul > li {
+    font-size: 1rem; 
+    color: var(--body-text); 
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+
+
+ /* Footer ----------------------------------------------------------------*/
 .footer {
      padding: 20px;
      text-align: center;
