@@ -1,0 +1,121 @@
+/* ###################################################
+ COLORS
+ ################################################### */
+:root {
+
+   
+     --body-bg: #12162A; 
+     --col-card-bg: #3E2D1F; 
+     --body-text: #F9F7EF; 
+
+     /* Shades  */
+     --site-title: #EFDB9B; 
+     --site-light1: #ffffff;
+     --site-dark1: #000000;
+
+
+     /* Colors by actions */
+     --site-lnk: #A0C6E3; 
+     --site-lnk-visited: #7E9AB3; 
+     --site-lnk-hover: #FBCB6B; 
+     --site-highlight-txt: #FFF5E1; 
+
+     /* Accents */
+     --signature: #CDD5F0; 
+     --site-footer: #111111; 
+ }
+
+
+/* ###################################################
+                    BASE SETUP
+ ################################################### */
+
+ *,
+ *::before,
+ *::after {
+     margin: 0;
+     padding-top: 0;
+     box-sizing: border-box;
+     /* margin negatives not needed */
+ }
+
+ html {
+     /* remove scroll bar x */
+     overflow-x: hidden;
+     /* smooth your scroll, ohh yeah */
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: "Pangolin", cursive;
+     font-size: 24px;
+     margin: 0;
+     padding: 0;
+     background-color: var(--body-bg);
+     color: var(--site-title);
+ }
+
+
+
+ a:link {
+     color: var(--site-lnk);
+     text-decoration: none;
+ }
+
+ a:visited {
+     color: var(--site-lnk-visited);
+     text-decoration: none;
+ }
+
+ a:hover,
+ a:focus-visible {
+     color: var(--site-lnk-hover);
+     text-decoration: underline;
+     outline: 2px dashed var(--site-title);
+     outline-offset: 2px;
+ }
+
+
+
+.bg-header {
+    width: 100%;
+    min-height: 20vh; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.438)), url('../images/across.jpg');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+
+    /* the bottom header line */
+    border-bottom: 24px solid #000000;
+}
+
+.site-title {
+    text-align: center;
+}
+
+.belt-buckle {
+    position: absolute;
+    /* note: to keep the buckle in the middle need to be half border-bottom: 24px */
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 10; 
+}
+
+.buckle-img {
+    width: 100px; 
+    height: auto;
+    border: solid 4px #000000;
+    
+    border-radius: 40%;
+    display: block;
+    /* was getting bleed on background - this fixed it :) */
+    filter: drop-shadow(0 6px 10px rgba(0,0,0, 0.9));
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);  */
+}
