@@ -46,16 +46,23 @@
      scroll-behavior: smooth;
  }
 
- body {
-     font-family: "Pangolin", cursive;
-     font-size: 24px;
-     margin: 0;
-     padding: 0;
-     background-color: var(--body-bg);
-     color: var(--site-title);
- }
+body {
+    font-family: "Pangolin", cursive;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    color: var(--site-title);
+    
+    /* push the footer down */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-
+main {
+    flex: 1; 
+}
 
  a:link {
      color: var(--site-lnk);
@@ -135,9 +142,16 @@
 
 
  /* Footer */
- .footer {
+.footer {
      padding: 20px;
      text-align: center;
      background: var(--site-footer);
      margin-top: 20px;
+     position: relative; /* Anchors belt to footer */
+ }
+
+ .footer .belt-pattern {
+     bottom: auto; 
+     top: 0;
+     transform: translateY(-50%); /* move it to top edge of footer */
  }
