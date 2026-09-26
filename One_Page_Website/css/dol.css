@@ -74,6 +74,9 @@
      outline: 2px dashed var(--site-title);
      outline-offset: 2px;
  }
+.site-title {
+    text-align: center;
+}
 
 
 
@@ -92,24 +95,34 @@
     position: relative; 
 
     /* the bottom header line */
-    border-bottom: 24px solid #000000;
+    /* border-bottom: 24px solid #000000; */
 }
 
-.site-title {
-    text-align: center;
+
+.belt-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 24px; 
+    background-image: url('../images/knotyline.jpg'); 
+    background-repeat: repeat-x; 
+    background-size: contain; 
+    transform: translateY(50%); 
+    z-index: 5; 
 }
 
 .belt-buckle {
     position: absolute;
     /* note: to keep the buckle in the middle need to be half border-bottom: 24px */
-    bottom: -12px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 10; 
 }
 
 .buckle-img {
-    width: 100px; 
+    width: 200px; 
     height: auto;
     border: solid 4px #000000;
     
@@ -119,3 +132,12 @@
     filter: drop-shadow(0 6px 10px rgba(0,0,0, 0.9));
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);  */
 }
+
+
+ /* Footer */
+ .footer {
+     padding: 20px;
+     text-align: center;
+     background: var(--site-footer);
+     margin-top: 20px;
+ }
