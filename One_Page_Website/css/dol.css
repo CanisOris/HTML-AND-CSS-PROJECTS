@@ -216,10 +216,45 @@ main {
     opacity: 0; 
 }
 
-/* ================[  KB  ]==================================================== */
+/* ================[  MIDBAR LAYOUT  ]==================================================== */
+.layout-midbar {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    gap: 40px; 
+    margin: 30px 20px; 
+}
+
+/* Targets the div holding the video */
+.layout-midbar > div:first-child {
+    flex-shrink: 0; 
+}
+
+/* Targets the div holding the text */
+.layout-midbar > div:last-child {
+    flex-grow: 1; 
+}
+
+/* ================[  Bust a Mp4  ]==================================================== */
+.video-box {
+    width: 250px; 
+    border: 0 solid #000000; 
+    border-radius: 48%; 
+    overflow: hidden; 
+}
+
+.video-box video {
+    width: 100%;
+    height: auto;
+    display: block; 
+    object-fit: cover; 
+}
+
+
+/* ================[  KB Psych ]==================================================== */
 #psych-logic {
     transition: color 8s ease, font-size 8s ease;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0 20px 20px 20px;
     text-align: center;
 }
