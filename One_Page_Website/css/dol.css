@@ -8,10 +8,10 @@
     --col-card-bg: #3E2D1F;
     --body-text: #F9F7EF;
 
-      /* --------------------------------------- */
-     --site-nav-top-bg: #000000;
-     --site-nav-top-btn-txt: #f2f2f2;
-     --site-nav-top-btn-hover: #ddd;
+    /* --------------------------------------- */
+    --site-nav-top-bg: #000000;
+    --site-nav-top-btn-txt: #f2f2f2;
+    --site-nav-top-btn-hover: #ddd;
 
 
     /* Shades  */
@@ -170,31 +170,65 @@ main {
 /* ================[  NAV  ]==================================================== */
 
 /* Style the top navigation bar */
- .topnav {
-     overflow: hidden;
-     margin-top: 12px;
-     background-color: var(--site-nav-top-bg);
- }
+.topnav {
+    overflow: hidden;
+    margin-top: 12px;
+    background-color: var(--site-nav-top-bg);
+}
 
- /* Style the topnav links */
- .topnav a {
-     float: left;
-     display: block;
-     color: var(--site-nav-top-btn-txt);
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
- }
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--site-nav-top-btn-txt);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
- /* Change color on hover */
+/* Change color on hover */
 .topnav a:hover,
- .topnav a:focus-visible {
-     background-color: var(--site-nav-top-btn-hover);
-     color: var(--site-dark1);
-     border-radius: 33%;
-     outline: 2px solid var(--site-highlight-txt);
-     outline-offset: -2px;
- }
+.topnav a:focus-visible {
+    background-color: var(--site-nav-top-btn-hover);
+    color: var(--site-dark1);
+    border-radius: 33%;
+    outline: 2px solid var(--site-highlight-txt);
+    outline-offset: -2px;
+}
+
+/* ================[  BIRD OVERLAY  ]==================================================== */
+.bird-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 90px; 
+    z-index: 30; 
+}
+
+.bird-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 2.8s ease; 
+}
+
+.bird-img:hover {
+    opacity: 0; 
+}
+
+/* ================[  KB  ]==================================================== */
+#psych-logic {
+    transition: color 8s ease, font-size 8s ease;
+    font-size: 1rem;
+    padding: 0 20px 20px 20px;
+    text-align: center;
+}
+
+#psych-logic:hover {
+    color: transparent;
+    font-size: .8rem;
+}
+
 
 /* ================[  TABLES  ]==================================================== */
 .div-table {
