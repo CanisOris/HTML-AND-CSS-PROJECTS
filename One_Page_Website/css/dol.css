@@ -250,16 +250,24 @@ main {
     height: auto;
     display: block;
     object-fit: cover;
-    
+
 }
 
 /* ================[  Video Screen ]==================================================== */
 /* https://www.youtube.com/watch?v=5-3xE4VphG0 */
 
 @keyframes cinematicText {
-  0% {transform: scale(90) translateX(-1vw);}
-  50% {transform: scale(4.5) translateX(0);}
-  100% {transform: scale(1) translateX(0);}
+    0% {
+        transform: scale(90) translateX(-1vw);
+    }
+
+    50% {
+        transform: scale(4.5) translateX(0);
+    }
+
+    100% {
+        transform: scale(1) translateX(0);
+    }
 }
 
 .vid-banner {
@@ -269,9 +277,9 @@ main {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    width: 400px; 
-    height: auto; 
-    border-radius: 22%;  
+    width: 400px;
+    height: auto;
+    border-radius: 22%;
 }
 
 .vid-banner .screen-text {
@@ -303,6 +311,7 @@ main {
     display: block;
     object-fit: cover;
 }
+
 /* ================[  KB Psych ]==================================================== */
 #psych-logic {
     transition: color 8s ease, font-size 8s ease;
@@ -393,4 +402,36 @@ strong {
     top: 0;
     transform: translateY(-70%);
     /* move it to top edge of footer */
+}
+
+@media screen and (max-width: 800px) {
+ .layout-midbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .vid-banner {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+   
+
+    #psych-logic {
+        transition: none; 
+        font-size: 1rem;
+        padding: 0 20px 20px 20px;
+        text-align: center;
+        color: #3097e6;
+    }
+
+    #psych-logic:hover {
+        transition: color 0.3s ease; 
+        color: #f5f10c;
+    }
+
 }
