@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
 /* ###################################################
  COLORS
  ################################################### */
@@ -201,60 +203,110 @@ main {
     position: absolute;
     top: 10px;
     right: 20px;
-    width: 90px; 
-    z-index: 30; 
+    width: 90px;
+    z-index: 30;
 }
 
 .bird-img {
     width: 100%;
     height: auto;
     display: block;
-    transition: opacity 2.8s ease; 
+    transition: opacity 2.8s ease;
 }
 
 .bird-img:hover {
-    opacity: 0; 
+    opacity: 0;
 }
 
 /* ================[  MIDBAR LAYOUT  ]==================================================== */
 .layout-midbar {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 40px; 
-    margin: 30px 20px; 
+    gap: 40px;
+    margin: 30px 20px;
 }
 
 /* Targets the div holding the video */
-.layout-midbar > div:first-child {
-    flex-shrink: 0; 
+.layout-midbar>div:first-child {
+    flex-shrink: 0;
 }
 
 /* Targets the div holding the text */
-.layout-midbar > div:last-child {
-    flex-grow: 1; 
+.layout-midbar>div:last-child {
+    flex-grow: 1;
 }
 
 /* ================[  Bust a Mp4  ]==================================================== */
-.video-box {
+/* .video-box {
     width: 250px; 
     border: 0 solid #000000; 
     border-radius: 48%; 
     overflow: hidden; 
-}
+} */
 
 .video-box video {
     width: 100%;
     height: auto;
-    display: block; 
-    object-fit: cover; 
+    display: block;
+    object-fit: cover;
+    
+}
+
+/* ================[  Video Screen ]==================================================== */
+/* https://www.youtube.com/watch?v=5-3xE4VphG0 */
+
+@keyframes cinematicText {
+  0% {transform: scale(90) translateX(-1vw);}
+  50% {transform: scale(4.5) translateX(0);}
+  100% {transform: scale(1) translateX(0);}
+}
+
+.vid-banner {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 400px; 
+    height: auto; 
+    border-radius: 22%;  
+}
+
+.vid-banner .screen-text {
+    text-transform: uppercase;
+    font-family: "Changa One", sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+    white-space: nowrap;
+    line-height: .8;
+    margin: 12px 0 12px 0;
+    /* height: 300px; */
+    animation: cinematicText 5s cubic-bezier(0, 0, .55, .55) 1s 1 both;
 }
 
 
+.vid-banner .video-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+}
+
+.vid-banner .video-box video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
 /* ================[  KB Psych ]==================================================== */
 #psych-logic {
     transition: color 8s ease, font-size 8s ease;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 0 20px 20px 20px;
     text-align: center;
 }
@@ -263,7 +315,6 @@ main {
     color: transparent;
     font-size: .8rem;
 }
-
 
 /* ================[  TABLES  ]==================================================== */
 .div-table {
