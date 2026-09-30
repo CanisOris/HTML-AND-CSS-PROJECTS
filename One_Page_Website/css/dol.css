@@ -292,7 +292,7 @@ main {
     line-height: .8;
     margin: 12px 0 12px 0;
     /* height: 300px; */
-    animation: cinematicText 5s cubic-bezier(0, 0, .55, .55) 1s 1 both;
+    animation: cinematicText 5s cubic-bezier(0, 0, .55, .55) 0s 1 both;
 }
 
 
@@ -405,11 +405,11 @@ strong {
 }
 
 @media screen and (max-width: 800px) {
- .layout-midbar {
+    /* move the text position before 600 */
+    .layout-midbar {
         flex-direction: column;
         align-items: center;
     }
-
 
     .vid-banner {
         width: 100%;
@@ -419,10 +419,8 @@ strong {
 
 @media screen and (max-width: 600px) {
 
-   
-
     #psych-logic {
-        transition: none; 
+        transition: none;
         font-size: 1rem;
         padding: 0 20px 20px 20px;
         text-align: center;
@@ -430,7 +428,7 @@ strong {
     }
 
     #psych-logic:hover {
-        transition: color 0.3s ease; 
+        transition: color 0.3s ease;
         color: #f5f10c;
     }
 
