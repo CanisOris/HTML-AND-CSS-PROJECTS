@@ -9,6 +9,7 @@
 | [AI Terms](#ai-terms) | AI Terms used and useful links |
 | [Dark Patterns](#dark-patterns) | Malicious Design Patterns |
 | [Pet Store](#pet-store) | Simple Pet Store Informatin Page |
+| [Simple Recipes](#simple-recipes) | Simple Recipes |
 | [Academy Cinemas](#academy-cinemas) | Theatre Info/Times Design |
 | [Portfolio](#portfolio) | Portfolio Project |
 | [Connect](#connect) | Connect with me |
@@ -56,7 +57,18 @@
 | **Skills practiced** |  |
 | **Project link** | [https://github.com/CanisOris/HTML-AND-CSS-PROJECTS/tree/main/The_Pet_Shop_Website] (Pet Shop) |
 
+---
 
+## Simple Recipes
+
+> 
+
+| Project Details | |
+| :-- | :-- |
+| **Technologies** | HTML, CSS, and other tools used |
+| **Features** |  |
+| **Skills practiced** |  |
+| **Project link** | [https://github.com/CanisOris/HTML-AND-CSS-PROJECTS/tree/main/Simple-Recipes] (Simple Recipes) |
 
 ---
 
