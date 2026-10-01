@@ -1,4 +1,4 @@
-# Portfolio
+# HTML-AND-CSS-PROJECTS
 
 
 
@@ -11,6 +11,7 @@
 | [Pet Store](#pet-store) | Simple Pet Store Informatin Page |
 | [Academy Cinemas](#academy-cinemas) | Theatre Info/Times Design |
 | [Portfolio](#portfolio) | Portfolio Project |
+| [Connect](#connect) | Connect with me |
 
 ---
 
