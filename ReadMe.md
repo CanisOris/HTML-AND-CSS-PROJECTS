@@ -7,7 +7,6 @@ HTML/CSS Assignments
 | Project | Overview |
 | :--  | :-- |
 | [HTML ](#JSProjects) |  |
-| [Toolbox](#Toolbox) | Toolbox |
 | [Portfolio](#portfolio) | Portfolio Project |
 | [Connect](#connect) | Connect with me |
 
@@ -21,15 +20,6 @@ HTML/CSS Assignments
 | :-- | :-- |
 | Web   | https://canisoris.github.io/HTML-AND-CSS-PROJECTS/ |
 | Files | https://github.com/CanisOris/HTML-AND-CSS-PROJECTS/ |
-
----
-## Toolbox
-
-**My JS Toolbox**
-
-| Platform | Profile |
-| :-- | :-- |
-| Depreciated JS | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/blob/main/Basic%20JavaScript%20Projects/Toolbox/js_depreciated.html |
 
 
 ---
