@@ -68,7 +68,7 @@
                     style counterpart, which requires some care when rolling and stretching.
                     Here, you just push the dough into the skillet and you're cooking.
                     Save the leftovers for lunch!</p>
-                <input id="featured-button" type="button" value="recipe">
+                <input id="featured-button" class="modal-button" type="button" value="recipe" href="#recipeModalOne">
             </div>
         </div>
         <!-- Recipe cards -->
@@ -204,25 +204,108 @@
     </section>
     <!-- About =============================== -->
     <section>
-<div class="container site-about" id="about">
-    <div>
-        <h2>About</h2>
-    </div>
-    <div>
-        <p>Simple Recipes is your ultimate destination for easy-to-follow recipes that make cooking enjoyable for everyone, 
-        whether you're a seasoned chef or a beginner. Founded in the United States out of a passion for home cooking, 
-        our mission is to inspire and empower you to create delicious meals with everyday ingredients and simple techniques. 
-        We offer a wide range of diverse cuisines, from classic comfort foods to international dishes, 
-        all accompanied by step-by-step instructions and helpful tips to ensure your cooking experience is smooth and successful. 
-        Our dedicated team of home cooks and food enthusiasts meticulously test each recipe, so you can cook with confidence. 
-        At Simple Recipes, we believe that good food brings people together, and we're excited to have you join our community. 
-        Let’s cook up something amazing together!</p>
-    </div>
-</div>
-        
-
+        <div class="container site-about" id="about">
+            <div>
+                <h2>About</h2>
+            </div>
+            <div>
+                <p>Simple Recipes is your ultimate destination for easy-to-follow recipes that make cooking enjoyable
+                    for everyone,
+                    whether you're a seasoned chef or a beginner. Founded in the United States out of a passion for home
+                    cooking,
+                    our mission is to inspire and empower you to create delicious meals with everyday ingredients and
+                    simple techniques.
+                    We offer a wide range of diverse cuisines, from classic comfort foods to international dishes,
+                    all accompanied by step-by-step instructions and helpful tips to ensure your cooking experience is
+                    smooth and successful.
+                    Our dedicated team of home cooks and food enthusiasts meticulously test each recipe, so you can cook
+                    with confidence.
+                    At Simple Recipes, we believe that good food brings people together, and we're excited to have you
+                    join our community.
+                    Let’s cook up something amazing together!</p>
+            </div>
+        </div>
 
     </section>
+    <!-- ============================================================================================[ MODALS ]========= -->
+
+    <div id="recipeModalOne" class="recipe-modal">
+        <!-- MODAL CONTENT -->
+        <div class="recipe-content">
+            <span class="close-btn">Times</span>
+            <div class="modal-header">
+                <h3>Deep Dish Skillet Pizza</h3>
+            </div>
+
+            <!-- **check modal body seems like a grid -->
+            <div class="modal-body">
+                <!-- -------------------------------------------------------------------[Row] -->
+                <div class="row">
+                    <!-- ----------------------------------------------------------[sections] -->
+                    <div class="rp-column-1">
+                        <h4>Cook Time</h4>
+                        <p>30-40 minutes</p>
+                    </div>
+                    <!-- -------------------------------------------------------------------- -->
+                    <div class="rp-column-1">
+                        <h4>Servings</h4>
+                        <p>6</p>
+                    </div>
+                    <!-- -------------------------------------------------------------------- -->
+                    <div class="rp-column-1">
+                        <h4>Level</h4>
+                        <p>medium</p>
+                    </div>
+                    <!-- -------------------------------------------------------------------- -->
+                </div>
+                <!-- row end/start -------------------------------------------------------------------- -->
+                <div class="row">
+                    <!-- ----------------------------------------------------------[sections] -->
+                    <div class="rp-column-1">
+                        <h4>Ingredients</h4>
+                        <ul class="recipe-list">
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                        </ul>
+                    </div>
+                    <!-- -------------------------------------------------------------------- -->
+                    <div class="rp-column-2">
+                        <h4>Directions</h4>
+                        <p class="recipe-directions">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eiusmod veniam quasi anim nulla
+                            reprehenderit consectetur duis nostrud consequat ut. Ratione provident dolorem odit nemo
+                            sequi ab eos numquam modi. Aliquip cupiditate quae dignissimos consequuntur nesciunt dolor
+                            numquam. Amet officia consectetur fugit ipsa. Ipsam sed id id iusto modi cupiditate dicta
+                            eius voluptate pariatur quasi animi adipiscing laborum.
+
+                            Praesentium et explicabo quis ea ratione non in quia quaerat ex molestias. Dolorem qui qui
+                            exercitation officia dolore aliqua in. Tempor ullamco atque cupidatat vitae magnam dolore.
+                            Dicta ipsa ipsam mollit esse adipisci vero ea ab quis. Magni consequat mollit architecto
+                            praesentium magni at elit ipsam. Quaerat laborum aliqua quis minim.
+
+                            Neque architecto laborum nulla dolores velit quis et velit voluptatum quas corrupti modi
+                            sint. Ullamco deleniti nisi quae consequuntur. Dolor adipiscing animi et aliqua nulla mollit
+                            pariatur neque provident. Eos ex duis veniam similique beatae quas consectetur voluptas duis
+                            vitae est. Ut quasi ipsam reprehenderit porro eiusmod nisi est exercitation quis.
+                        </p>
+                    </div>
+                    <!-- -------------------------------------------------------------------- -->
+                    <div class="rp-column-1">
+                        <h4>Level</h4>
+                        <p>medium</p>
+                    </div>
+                    <!-- -------------------------------------------------------------------- -->
+                </div>
+                <!-- row end/start -------------------------------------------------------------------- -->
+
+            </div>
+
+        </div>
+    </div>
+
     <!-- contact form =============================== -->
     <section>
         <div class="container form-container" id="contact">
@@ -262,8 +345,9 @@
             </div>
             <div>503-206-6915</div>
 
-        </div>
+        </div> 
     </footer>
+    <script src="./javascript/javascript.js"></script>
 </body>
 
 
