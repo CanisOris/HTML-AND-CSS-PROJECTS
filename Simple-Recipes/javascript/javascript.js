@@ -1,16 +1,24 @@
 
+
+// **snip(37)
 // RECIPE MODAL SECTION
-// **snip(10)
 // **todo look closer 
 // modal btn 
-
 var btns = document.querySelectorAll("input.modal-button");
 
 for (var i = 0; i < btns.length; i++) {
-
     btns[i].onclick = function (event) {
         const modal = document.querySelector(event.target.getAttribute("href"));
+
+        //**snip(9) close modal on timer */
+        // reset modal
+        clearTimeout(modal.closeTimer);
         modal.style.display = "block";
+
+        // close modal 10 sec
+        modal.closeTimer = setTimeout(function () {
+            modal.style.display = "none";
+        }, 10000);
     };
 }
 
@@ -27,6 +35,9 @@ for (var i = 0; i < closeBtn.length; i++) {
         }
     }
 }
+
+
+
 
 // EMAIL VALIDATION
 document.getElementById('contactForm').addEventListener('submit',
