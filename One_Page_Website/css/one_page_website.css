@@ -410,6 +410,7 @@ I always liked the custom ones */
      text-transform: uppercase;
  }
 
+ /* **clip(css) */
  /* This is cool I have never used this one before */
  p::selection {
      background-color: var(--site-highlight-txt);
@@ -434,6 +435,77 @@ I always liked the custom ones */
      font-size: 1.4em;
      font-family: Lucida Handwriting, Papyrus, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  }
+
+
+
+ /* ================ LIGHTBOX ================== MODAL ==================== */
+
+        /* The Thumbnail Image */
+        .lightbox-trigger {
+            max-width: 100%;
+            height: auto;
+            max-height: 320px;
+            cursor: pointer;
+            border: 2px solid #00ffcc; /* High contrast interactive accent */
+            border-radius: 4px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .lightbox-trigger:hover,
+        .lightbox-trigger:focus-visible {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+
+        /* Modal default hidden */
+        .lightbox-modal {
+            display: none; /* Changed to flex via JS when opened */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95); /* Deep black overlay */
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* The Full-Size Image */
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 80vh;
+            border: 3px solid #ffffff; /* Stark contrast framing */
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        /* **snap(end) modal close lightbox */
+        /* The Close Button */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            background: transparent;
+            border: 0;
+            padding: 0 10px;
+            line-height: 1;
+            color: #00ffcc;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus-visible {
+            color: #ffffff;
+        }
+
+
+
 
 
  /* ###################################################
@@ -473,3 +545,5 @@ I always liked the custom ones */
          font-size: 2.2em;
      }
  }
+
+ 

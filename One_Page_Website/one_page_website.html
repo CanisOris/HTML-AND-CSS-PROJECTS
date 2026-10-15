@@ -4,12 +4,15 @@
 <head>
     <title>AI TERMS</title>
     <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="M@" />
     <meta http-equiv="Page-Enter" content="blendTrans(Duration=2)" />
     <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
     <link rel="stylesheet" type="text/css" href="./css/one_page_website.css" />
-
+    <script src="./js/on_page_website.js" defer></script>
     <script src="/HTML-AND-CSS-PROJECTS/js1/site.js" defer></script>
 
 
@@ -22,19 +25,20 @@
             <div class="logo-div">
                 <img class="site-logo" src="./images/logo3.png" alt="Captivating Logo">
             </div>
-            <div >
-                <h1 class="site-title" id="page-title" />
+            <div>
+                <h1 class="site-title" id="page-title">AI TERMS</h1>
             </div>
             <div style="width: 120px;"></div>
         </div>
 
-        <nav >
+        <nav>
             <div class="topnav">
                 <a href="#1">Link</a>
                 <a href="#2">Link</a>
                 <a href="#3">Link</a>
                 <div style="float: right;margin-top: 12px;">
-                    <form><input id="search" class="form-textbox" type="text" aria-label="Search site" placeholder="Search"></form>
+                    <form><input id="search" class="form-textbox" type="text" aria-label="Search site"
+                            placeholder="Search"></form>
                 </div>
 
             </div>
@@ -43,6 +47,35 @@
     </header>
 
     <main style="padding-top: 0px;">
+        <div>
+            <img src="./images/topimg1.png" alt="Thumbnail" class="lightbox-trigger"
+                role="button" tabindex="0" aria-label="Enlarge image" aria-haspopup="dialog"
+                onclick="openLightbox(this.src)">
+
+            <img src="./images/topimg2.png" alt="Thumbnail" class="lightbox-trigger"
+                role="button" tabindex="0" aria-label="Enlarge image" aria-haspopup="dialog"
+                onclick="openLightbox(this.src)">
+
+            <img src="./images/topimg3.png" alt="Thumbnail" class="lightbox-trigger"
+                role="button" tabindex="0" aria-label="Enlarge image" aria-haspopup="dialog"
+                onclick="openLightbox(this.src)">
+
+            <img src="./images/topimg4.png" alt="Thumbnail" class="lightbox-trigger"
+                role="button" tabindex="0" aria-label="Enlarge image" aria-haspopup="dialog"
+                onclick="openLightbox(this.src)">
+
+            <img src="./images/topimg5.png" alt="Thumbnail" class="lightbox-trigger"
+                role="button" tabindex="0" aria-label="Enlarge image" aria-haspopup="dialog"
+                onclick="openLightbox(this.src)">
+
+            <!-- Modal Box ####################################################################################### -->
+            <div id="myLightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image preview"
+                onclick="closeLightbox(event)">
+                <button type="button" class="close-btn" aria-label="Close Lightbox">&times;</button>
+                <img class="lightbox-content" id="lightboxImage" alt="Full size image">
+            </div>
+        </div>
+
         <div class="row">
             <!-- ==================================================================
                                 LEFT COL
@@ -140,8 +173,9 @@
 
                                 <label class="svg-checkbox">
                                     <input type="checkbox" name="dynamic-check" />
-                                    <svg aria-hidden="true" class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg aria-hidden="true" class="check-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
 
                                         <!-- Unchecked Question Mark -->
                                         <g class="question-mark">
@@ -168,7 +202,8 @@
                                 </label>
 
                             </div>
-                            <textarea id="message" placeholder="Type the message ...." class="form-textbox-multiline" aria-label="Message contents"></textarea>
+                            <textarea id="message" placeholder="Type the message ...." class="form-textbox-multiline"
+                                aria-label="Message contents"></textarea>
                             <input type="submit" value="Submit" class="form-submission-button">
                         </div>
                     </form>
