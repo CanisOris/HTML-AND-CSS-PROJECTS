@@ -13,7 +13,7 @@
     <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
     <link rel="stylesheet" type="text/css" href="./css/one_page_website.css" />
     <script src="./js/on_page_website.js" defer></script>
-    <script src="/HTML-AND-CSS-PROJECTS/js1/site.js" defer></script>
+    <script src="./js/site.js" defer></script>
 
 
 </head>
@@ -26,6 +26,8 @@
                 <img class="site-logo" src="./images/logo3.png" alt="Captivating Logo">
             </div>
             <div>
+                <!-- site.js use head title as page title. MS -->
+                <!-- originally did this because i had local and prod and I wanted to drag the links so I had to append the domain.  use try catch so if you don't want the same title then don't use it. MS -->
                 <h1 class="site-title" id="page-title">AI TERMS</h1>
             </div>
             <div style="width: 120px;"></div>
@@ -48,6 +50,7 @@
 
     <main style="padding-top: 0px;">
         <div>
+            <!-- All of the images have triggers to tricker the modal this.src sends the specific img info MS -->
             <img src="./images/topimg1.png" alt="Thumbnail" class="lightbox-trigger"
                 role="button" tabindex="0" aria-label="Enlarge image" aria-haspopup="dialog"
                 onclick="openLightbox(this.src)">
@@ -69,6 +72,7 @@
                 onclick="openLightbox(this.src)">
 
             <!-- Modal Box ####################################################################################### -->
+            <!-- This modal takes the img passed and displays the large version here for all the images above MS -->
             <div id="myLightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image preview"
                 onclick="closeLightbox(event)">
                 <button type="button" class="close-btn" aria-label="Close Lightbox">&times;</button>
@@ -76,6 +80,7 @@
             </div>
         </div>
 
+        <!-- Floated Columns 2 wide :) MS -->
         <div class="row">
             <!-- ==================================================================
                                 LEFT COL

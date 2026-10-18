@@ -6,11 +6,13 @@ let previousFocus;
 let previousOverflow;
 
 function openLightbox(imageSrc) {
+    // ##### Open Lightbox If it is not already on MS
     if (lightbox.style.display === "flex") return;
     previousFocus = document.activeElement;
     previousOverflow = document.body.style.overflow;
     // Use the same seeded photo for the thumbnail and larger image.
     lightboxImg.src = imageSrc.replace("/300/200", "/900/600");
+    // set to flex MS
     lightbox.style.display = "flex";
     document.body.style.overflow = "hidden";
     lightboxClose.focus();
