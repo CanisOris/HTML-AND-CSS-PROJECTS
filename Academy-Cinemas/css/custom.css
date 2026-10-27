@@ -132,6 +132,16 @@ body {
   background-size: 100%; */
 }
 
+.nav-shrink {
+    height: 80px;
+    transition: .5s ease;
+}
+
+.navbar-collapse{
+    transition: margin-top 0.5s ease;
+}
+
+
 /* header */
 #header-image {
     padding-top: 150px;
