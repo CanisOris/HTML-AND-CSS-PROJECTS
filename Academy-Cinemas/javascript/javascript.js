@@ -44,3 +44,8 @@ function buyTickets() {
 
     bootstrap.Toast.getOrCreateInstance(document.getElementById('toastDisplay')).show();
 }
+
+// Bootstrap 5 tooltips must be initialized explicitly.
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (element) {
+    new bootstrap.Tooltip(element);
+});
