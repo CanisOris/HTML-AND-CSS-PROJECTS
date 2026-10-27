@@ -326,11 +326,17 @@ footer{
     width: 80%;
 }
 
-/* Keep ticket feedback visible beside the purchase controls. */
+/* Center the toast without stretching it between opposite edges. */
 #toastDisplay {
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
     z-index: 1090;
     max-width: calc(100vw - 2rem);
+}
+#toastBody {
+    white-space: pre-line;
 }

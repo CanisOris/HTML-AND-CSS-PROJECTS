@@ -37,7 +37,9 @@ function buyTickets() {
     } else {
         const movie = movieSelect.options[movieSelect.selectedIndex].text;
         const time = timeSelect.options[timeSelect.selectedIndex].text;
-        toastBody.textContent = `Selected movie: ${movie}. Time: ${time}. Tickets: ${quantity}.`;
+        // \n works when css white-space: pre-line;
+        toastBody.textContent = `Selected movie:${movie}\nTime: ${time}\nTickets: ${quantity}`;
+    
     }
 
     bootstrap.Toast.getOrCreateInstance(document.getElementById('toastDisplay')).show();
