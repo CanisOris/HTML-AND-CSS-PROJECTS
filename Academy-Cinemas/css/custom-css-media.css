@@ -1,17 +1,17 @@
 
-/* this doesn't seem to be working for some reason */
+/* Scale type between mobile and desktop sizes. */
 @media screen and (min-width: 320px){
     h1{
-        font-size: calc(50px + (100-50) * ((100vw - 320px) / (1920 -320)));
+        font-size: clamp(50px, calc(40px + 3.125vw), 100px);
     }
     h4{
-        font-size: calc(50px + (35-25) * ((100vw - 320px) / (1920 -320)));
+        font-size: clamp(25px, calc(23px + 0.625vw), 35px);
     }
-    .lead, btn{
-        font-size: calc(16px + (18 -16) * ((100vw - 330px) / (1920 -320)));
+    .lead, .btn{
+        font-size: clamp(16px, calc(15.6px + 0.125vw), 18px);
     }
 .yellow-btn {
-    font-size: calc(20px + (25-20) * ((100vw - 320px) / (1920 -320)));
+    font-size: clamp(20px, calc(19px + 0.3125vw), 25px);
 }
 
 }
@@ -47,5 +47,29 @@ html {
 
     .container{
         padding: 50px;
+    }
+}
+@media screen and (max-width: 991.98px) {
+    #tickets > .d-flex {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+
+    #tickets .card {
+        height: auto;
+        min-height: 200px;
+        margin-right: 0;
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 30px;
+        padding-left: 0;
+    }
+
+    .container {
+        padding: 32px 20px;
     }
 }
