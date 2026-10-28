@@ -145,7 +145,7 @@ body {
 
 /* header */
 #header-image {
-    padding-top: 150px;
+    padding-top: 0;
 }
 
 h1,
