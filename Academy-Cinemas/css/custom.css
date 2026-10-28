@@ -25,6 +25,10 @@
     --myfoot-font-h3-color:rgb(237, 192, 3); 
 }
 
+.container a {
+    text-decoration: none;
+}
+
 html {
     scroll-padding-top: 100px;
 }
