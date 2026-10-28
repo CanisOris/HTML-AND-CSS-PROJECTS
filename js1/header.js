@@ -6,15 +6,8 @@ const header = document.querySelector("header");
 if (header) {
     header.insertAdjacentHTML("afterbegin", `
         <nav class="site-nav" aria-label="Main navigation">
-            <a href="/JAVASCRIPT-PROJECTS/">Home</a>
-            <a href="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/">
-                Basic Projects
-            </a>
-            <a href="/JAVASCRIPT-PROJECTS/Advanced%20JavaScript%20Projects/">
-                Advanced Projects
-            </a>
-            <a href="/JAVASCRIPT-PROJECTS/AJAX/">AJAX</a>
-            <a href="/JAVASCRIPT-PROJECTS/JQuery/">jQuery</a>
+            <a href="/HTML-AND-CSS-PROJECTS/">Home</a>
+           
         </nav>
     `);
 }
