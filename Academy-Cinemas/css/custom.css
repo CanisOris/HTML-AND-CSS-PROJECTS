@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 :root {
+    --paper-background: #d9d8d2;
     --main-color: rgb(126, 133, 130);
     --main-color-accent: rgb(237, 192, 3);
     --main-color-transparent: rgba(126, 133, 130, 0.8);
@@ -223,6 +224,12 @@ img {
     color: var(--accent-color);
     font-family: var(--main-font-family);
     font-size: 18px;
+    
+    width: 100%;
+}
+
+.btn .col {
+    display: flexbox;
 }
 
 .btn:focus {
@@ -262,7 +269,7 @@ img {
     padding: 40px;
     height: 250px;
     margin-right: 20px;
-    background-color: white;
+    background-color: var(--paper-background);
 }
 
 .form-select {
@@ -349,4 +356,83 @@ footer{
 }
 #toastBody {
     white-space: pre-line;
+}
+/* Compact movie details while keeping the poster-controlled height. */
+#now-playing .card-body {
+    padding: 15px 16px;
+}
+
+#now-playing .card-body > br {
+    display: none;
+}
+
+#now-playing .lead {
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+#now-playing .card-title {
+    margin-bottom: 6px;
+}
+
+#now-playing h4.card-title {
+    margin-top: 8px;
+}
+
+#now-playing .btn {
+    height: 22px;
+    padding: 1px 10px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 18px;
+}
+/* Four showtimes per row, followed by any remaining times. */
+#now-playing .showtimes {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 6px;
+}
+
+#now-playing .showtimes .btn {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    white-space: nowrap;
+}
+/* Newspaper-grey movie cards with centered titles and showtimes. */
+#now-playing .card {
+    background-color: var(--paper-background);
+}
+
+#now-playing h3.card-title,
+#now-playing h4.card-title {
+    text-align: center;
+}
+
+#now-playing .movie-credit {
+    display: block;
+    margin-top: 10px;
+}
+
+#now-playing h4.card-title {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+#now-playing .showtimes .btn {
+    grid-column: span 2;
+    text-align: center;
+}
+
+#now-playing .showtimes .btn:nth-child(5) {
+    grid-column: 3 / span 2;
+}
+/* Match ticket controls and contact fields to the movie info cards. */
+#tickets .form-select,
+#tickets input[type="number"],
+#contact .form-control {
+    background-color: var(--paper-background);
 }

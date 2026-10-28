@@ -73,3 +73,38 @@ html {
         padding: 32px 20px;
     }
 }
+/* Let each natural poster height set its desktop row height. */
+@media screen and (min-width: 992px) {
+    #now-playing > .d-flex {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 8.333333%;
+        padding-left: 4.166667%;
+        padding-right: 4.166667%;
+        align-items: stretch;
+    }
+
+    #now-playing > .d-flex > .col-lg-5 {
+        width: 100%;
+        min-width: 0;
+        margin: 0 !important;
+    }
+
+    #now-playing [data-bs-toggle="popover"] {
+        display: block !important;
+    }
+
+    #now-playing [data-bs-toggle="popover"] > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    #now-playing > .d-flex > .card {
+        /* Text cannot make the grid row taller than its poster. */
+        contain: size;
+        min-height: 0;
+        overflow-y: auto;
+    }
+}
