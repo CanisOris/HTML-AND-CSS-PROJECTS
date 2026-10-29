@@ -48,6 +48,17 @@
     font-variant-numeric: tabular-nums;
 }
 
+/* Keep the chair proportional and override the global mobile image margin. */
+.pod-departures .pod-chair {
+    display: block;
+    float: none;
+    width: auto;
+    height: clamp(56px, 7vw, 80px);
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
 .pod-board-header {
     display: flex;
     align-items: center;
@@ -185,6 +196,8 @@
     font-size: 14px;
     text-transform: none;
 }
+
+
 
 @media (max-width: 575.98px) {
     .pod-experience {
