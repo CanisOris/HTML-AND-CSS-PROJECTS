@@ -55,6 +55,16 @@ body {
     font-size: 45px;
     padding-left: 30px;
 }
+
+/* **snip(8) Override css default ran into this before  */
+/* Override Bootstrap's black brand color after a click or keyboard focus. */
+/* Issue: Link color change to active color and stick until you click anywhere else. */
+/* Level: Very distracting and could be misleading on quality */
+.navbar-brand:focus,
+.navbar-brand:active {
+    color: var(--main-color-accent);
+}
+
 .navbar-brand:hover {
     color: #3DD7E3;
 }
