@@ -55,6 +55,9 @@ body {
     font-size: 45px;
     padding-left: 30px;
 }
+.navbar-brand:hover {
+    color: #3DD7E3;
+}
 
 .nav-link {
     color: var(--main-color-accent);
@@ -439,4 +442,10 @@ footer{
 #tickets input[type="number"],
 #contact .form-control {
     background-color: var(--paper-background);
+}
+/* Turquoise hover text for the menu and its movie links. */
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+    color: #3DD7E3;
 }
